@@ -7,7 +7,6 @@
     font-weight: bolder;
     transition: all ease 0.2s;
 }
-
 .button_primary:hover {
     background-color: #0746bf;
     margin-top: -2px;
