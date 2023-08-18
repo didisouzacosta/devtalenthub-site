@@ -1,0 +1,13 @@
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.footer {
+    max-width: 100%;
+    width: var(--max-width);
+    background-color: red;
+    padding: var(--padding);
+}
