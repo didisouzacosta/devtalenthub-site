@@ -1,7 +1,7 @@
 export default function Job() {
     return (
         <div>
-            <h1>Job</h1>
+            <h1>Post a job</h1>
         </div>
     )
 }

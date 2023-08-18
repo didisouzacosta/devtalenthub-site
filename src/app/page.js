@@ -1,9 +1,3 @@
-import styles from './page.module.css'
+import Home from './home/page'
 
-export default function Home() {
-  return (
-    <main>
-      <h1>Home</h1>
-    </main>
-  )
-}
+export default Home;
