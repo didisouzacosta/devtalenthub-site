@@ -1,6 +1,8 @@
 'user client'
 import Image from 'next/image'
 import Link from 'next/link'
+
+import utilStyles from '@/app/util/styles/util.module.css'
 import styles from './header.module.css'
 
 export default function Header() {
@@ -16,7 +18,7 @@ export default function Header() {
                     <li><Link href="/categories">Categories</Link></li>
                     <li><Link href="/contact">Contact</Link></li>
                 </ul>
-                <Link href="/job">Post a job</Link>
+                <Link href="/job" className={utilStyles.button_primary}>Post a job</Link>
             </nav>
         </div>
     )

@@ -6,10 +6,11 @@
 }
 
 .nav {
-    display: flex;
-    max-width: 100%;
-    width: var(--max-width);
-    padding: var(--padding);
+  display: flex;
+  align-items: flex-start;
+  max-width: 100%;
+  width: var(--max-width);
+  padding: var(--padding);
 }
 
 .brand {
