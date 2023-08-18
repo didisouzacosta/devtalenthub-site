@@ -1,5 +1,7 @@
 :root {
   --padding: 1rem;
+  --padding-large: 2rem;
+  --padding-extra-large: 3rem;
 
   --max-width: 1100px;
   --border-radius: 12px;

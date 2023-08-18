@@ -9,5 +9,5 @@
 }
 .button_primary:hover {
     background-color: #0746bf;
-    margin-top: -2px;
+    transform: translateY(-5%);
 }

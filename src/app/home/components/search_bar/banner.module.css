@@ -1,0 +1,14 @@
+.container {
+    margin: var(--padding);
+}
+
+.search_bar {
+    margin: 0 auto;
+    margin-top: -80px;
+    padding: var(--padding-extra-large);
+    border: 1px solid #e0e0ea;
+    border-radius: 1.4rem;
+    background-color: white;
+    width: 100%;
+    max-width: var(--max-width);
+}

@@ -2,7 +2,6 @@
     display: flex;
     justify-content: center;
     background-color: #f2f4ff;
-    height: 500px;
     padding: var(--padding);
 }
 
@@ -14,6 +13,7 @@
 
 .span {
     margin-top: 80px;
+    margin-bottom: 120px;
     display: inline-block;
     vertical-align: middle;
     line-height: normal;
