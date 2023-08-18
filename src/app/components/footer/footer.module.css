@@ -8,6 +8,5 @@
 .footer {
     max-width: 100%;
     width: var(--max-width);
-    background-color: red;
     padding: var(--padding);
 }
