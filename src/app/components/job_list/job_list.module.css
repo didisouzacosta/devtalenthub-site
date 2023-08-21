@@ -21,7 +21,7 @@
 
 .job_list_item {
     display: grid;
-    grid-template-columns: 2fr repeat(3, 1fr);
+    grid-template-columns: repeat(4, auto);
     column-gap: 8px;
     padding: var(--padding);
     border: 1px solid #e0e0ea;
@@ -31,10 +31,14 @@
     background-color: white;
 }
 .job_list_item:hover {
-    cursor: pointer;
     transform: translateY(-5%);
     border-color: #0162ff;
 }
+
+.job_list_item a {
+    text-decoration: underline;
+    color: #0162ff;
+} 
 
 .job_list_item:hover .company_wrapper strong{
     color: #0162ff;
@@ -75,4 +79,14 @@
     font-size: 14px;
     color: gray;
     font-weight: 300;
+}
+
+@media (max-width: 600px) {
+    .job_list_item {
+        grid-template-columns: repeat(3, auto);
+    }
+    .job_list_item .company_wrapper {
+        grid-column-start: 1;
+        grid-column-end: 4;
+    }
 }

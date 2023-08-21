@@ -6,7 +6,7 @@ import styles from './job_list.module.css'
 
 function JobListItem() {
     return (
-        <div className={styles.job_list_item}>
+        <Link href="" className={styles.job_list_item}>
             <div className={styles.company_wrapper}>
                 <Image
                     src="https://assets.website-files.com/60c77302fcfa2bdb6e595f76/60c7c7ea645b46e9836da40c_icon-4-company-job-board-x-template.svg"
@@ -17,8 +17,8 @@ function JobListItem() {
                     alt="Google"
                 />
                 <div>
-                    <span><strong>Company name</strong></span>
-                    <Link href="" className={styles.company_link}>Company link</Link>
+                    <span><strong>Job title</strong></span>
+                    <span className={styles.company_link}>Company</span>
                 </div>
             </div>
             <div className={styles.column_wrapper}>
@@ -33,7 +33,7 @@ function JobListItem() {
                 <p className={styles.title}>Language</p>
                 <strong>Swift</strong>
             </div>
-        </div>
+        </Link>
     )
 }
 
