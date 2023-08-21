@@ -17,6 +17,13 @@
     row-gap: 16px;
 }
 
+.ad_container {
+    background-color: red;
+    margin: 0 auto;
+    width: 970px;
+    margin-bottom: 64px;
+}
+
 @media (max-width: 600px) {
     .grid {
         display: grid;
