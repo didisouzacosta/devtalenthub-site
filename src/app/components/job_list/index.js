@@ -5,9 +5,12 @@ import Link from 'next/link'
 
 import styles from './job_list.module.css'
 
-function JobListItem() {
+function JobListItem({ isFeatured }) {
     return (
-        <Link href="" className={styles.job_list_item}>
+        <Link
+            href=""
+            className={`${styles.job_list_item} ${isFeatured ? styles.featured : ''}`}
+        >
             <div className={styles.company_wrapper}>
                 <Image
                     src="https://assets.website-files.com/60c77302fcfa2bdb6e595f76/60c7c7ea645b46e9836da40c_icon-4-company-job-board-x-template.svg"
@@ -44,8 +47,8 @@ export default function JobList() {
             <div className={styles.job_list}>
                 <div className={styles.job_list_items}>
                     <h2>Featured jobs</h2>
-                    <JobListItem />
-                    <JobListItem />
+                    <JobListItem isFeatured={true} />
+                    <JobListItem isFeatured={true} />
                 </div>
 
                 <div className={styles.job_list_items}>

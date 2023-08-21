@@ -28,6 +28,14 @@
     border-color: #0162ff;
 }
 
+.featured {
+    background-color: #fffef9;
+    border: 1px solid #ffd96a;
+}
+.featured:hover {
+    border-color: #ffd96a;
+}
+
 .job_list_item a {
     text-decoration: underline;
     color: #0162ff;
