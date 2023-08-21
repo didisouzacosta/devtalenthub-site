@@ -1,4 +1,5 @@
 'user client'
+
 import Image from 'next/image'
 import Link from 'next/link'
 
@@ -49,6 +50,9 @@ export default function JobList() {
 
                 <div className={styles.job_list_items}>
                     <h2>Latest jobs</h2>
+                    <JobListItem />
+                    <JobListItem />
+                    <JobListItem />
                     <JobListItem />
                     <JobListItem />
                     <JobListItem />

@@ -4,11 +4,17 @@
 
 .grid {
     display: grid;
-    grid-template-columns: 75% 25%;
-    column-gap: 16px;
+    align-items: flex-start;
+    grid-template-columns: 1fr 300px;
+    column-gap: 48px;
     margin: 0 auto;
     width: 100%;
     max-width: var(--max-width);
+}
+
+.advertising {
+    display: grid;
+    row-gap: 16px;
 }
 
 @media (max-width: 600px) {
