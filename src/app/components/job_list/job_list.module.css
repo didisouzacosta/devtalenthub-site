@@ -1,13 +1,6 @@
-.container {
-    margin: var(--margin);
-}
-
 .job_list {
     display: grid;
     row-gap: 48px;
-    margin: 0 auto;
-    width: 100%;
-    max-width: var(--max-width);
 }
 
 .job_list_items {
