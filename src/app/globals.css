@@ -3,6 +3,10 @@
   --padding-large: 2rem;
   --padding-extra-large: 3rem;
 
+  --margin: 1rem;
+  --margin-large: 2rem;
+  --margin-extra-large: 3rem;
+
   --max-width: 1100px;
   --border-radius: 12px;
   --font-mono: ui-monospace, Menlo, Monaco, 'Cascadia Mono', 'Segoe UI Mono',
@@ -59,4 +63,12 @@ body {
 a {
   color: inherit;
   text-decoration: none;
+}
+
+strong {
+  font-weight: 600;
+}
+
+p {
+  margin-bottom: 0.5rem;
 }
