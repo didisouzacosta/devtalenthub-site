@@ -8,7 +8,7 @@ import styles from './job_list.module.css'
 function JobListItem({ isFeatured }) {
     return (
         <Link
-            href=""
+            href="/job"
             prefetch={isFeatured}
             className={`${styles.job_list_item} ${isFeatured ? styles.featured : ''}`}
         >

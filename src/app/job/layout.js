@@ -1,6 +1,6 @@
 export const metadata = {
-    title: 'Post a job',
-    description: 'Think a little bit more about us',
+    title: 'Job',
+    description: 'Your new job is here',
 }
 
 export default function JobLayout({ children }) {

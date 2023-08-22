@@ -1,10 +1,9 @@
-
 export const metadata = {
-    title: 'Categories',
+    title: 'Post a job',
     description: 'Think a little bit more about us',
 }
 
-export default function CategoriesLayout({ children }) {
+export default function PostJobLayout({ children }) {
     return (
         <section>
             {children}

@@ -12,32 +12,32 @@ export default function Footer() {
                     <div className={styles.column_wrapper}>
                         <h3>Pages</h3>
                         <ul>
-                            <li><Link href=''>Home</Link></li>
-                            <li><Link href=''>About us</Link></li>
+                            <li><Link href='/home'>Home</Link></li>
+                            <li><Link href='/about'>About us</Link></li>
                             <li><Link href=''>Categories</Link></li>
-                            <li><Link href=''>Companies</Link></li>
-                            <li><Link href=''>Contact</Link></li>
+                            <li><Link href='/companies'>Companies</Link></li>
+                            <li><Link href='/contact'>Contact</Link></li>
                         </ul>
                     </div>
 
                     <div className={styles.column_wrapper}>
                         <h3>Knowedges</h3>
                         <ul>
-                            <li><Link href=''>Swift</Link></li>
-                            <li><Link href=''>SwiftUI</Link></li>
-                            <li><Link href=''>Kotlin</Link></li>
-                            <li><Link href=''>Java</Link></li>
-                            <li><Link href=''>React Native</Link></li>
-                            <li><Link href=''>Flutter</Link></li>
+                            <li><Link href='/search?knowedge=swift'>Swift</Link></li>
+                            <li><Link href='/search?knowedge=swiftui'>SwiftUI</Link></li>
+                            <li><Link href='/search?knowedge=kotlin'>Kotlin</Link></li>
+                            <li><Link href='/search?knowedge=java'>Java</Link></li>
+                            <li><Link href='/search?knowedge=react_native'>React Native</Link></li>
+                            <li><Link href='/search?knowedge=flutter'>Flutter</Link></li>
                         </ul>
                     </div>
 
                     <div className={styles.column_wrapper}>
                         <h3>Level</h3>
                         <ul>
-                            <li><Link href=''>Junior</Link></li>
-                            <li><Link href=''>Pleno</Link></li>
-                            <li><Link href=''>Senior</Link></li>
+                            <li><Link href='/search?level=junior'>Junior</Link></li>
+                            <li><Link href='/search?level=pleno'>Pleno</Link></li>
+                            <li><Link href='/search?level=senior'>Senior</Link></li>
                         </ul>
                     </div>
 
