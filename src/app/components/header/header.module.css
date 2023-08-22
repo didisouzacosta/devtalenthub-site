@@ -1,18 +1,32 @@
 .center {
   display: flex;
   justify-content: center;
-  align-items: center;
-  position: relative;
+}
+
+.brand {
+  margin-right: auto;
 }
 
 .nav {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   max-width: 100%;
   width: var(--max-width);
   padding: var(--padding);
 }
 
-.brand {
-  margin-right: auto;
+.nav ul {
+  display: flex;
+  margin-right: 32px;
+  list-style: none;
+}
+
+.nav ul li {
+  font-weight: 300;
+  font-size: 18px;
+  padding: 12px 16px;
+  margin: 0 4px;
+}
+.nav ul li:hover {
+  color: #0162ff;
 }

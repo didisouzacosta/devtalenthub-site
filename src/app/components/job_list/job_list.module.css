@@ -39,9 +39,9 @@
 .job_list_item a {
     text-decoration: underline;
     color: #0162ff;
-} 
+}
 
-.job_list_item:hover .company_wrapper strong{
+.job_list_item:hover .company_wrapper strong {
     color: #0162ff;
 }
 

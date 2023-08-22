@@ -10,7 +10,12 @@ export default function Header() {
         <div className={styles.center}>
             <nav className={styles.nav}>
                 <Link href="/" className={styles.brand}>
-                    <Image src="" alt="DevTalentHub" />
+                    <Image 
+                    src="https://assets.website-files.com/60c77302fcfa2b84ab595f64/60da7a7b304772e2954fe9e4_job-board-x-logo-webflow-template-2.svg"
+                    width={200}
+                    height={50}
+                    alt="DevTalentHub"
+                />
                 </Link>
                 <ul role='list'>
                     <li><Link href="/">Home</Link></li>
@@ -18,7 +23,7 @@ export default function Header() {
                     <li><Link href="/categories">Categories</Link></li>
                     <li><Link href="/contact">Contact</Link></li>
                 </ul>
-                <Link href="/job" className={utilStyles.button_primary}>Post a job</Link>
+                <Link href="/job" prefetch={true} className={utilStyles.button_primary}>Post a job</Link>
             </nav>
         </div>
     )

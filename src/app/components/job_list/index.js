@@ -9,6 +9,7 @@ function JobListItem({ isFeatured }) {
     return (
         <Link
             href=""
+            prefetch={isFeatured}
             className={`${styles.job_list_item} ${isFeatured ? styles.featured : ''}`}
         >
             <div className={styles.company_wrapper}>
