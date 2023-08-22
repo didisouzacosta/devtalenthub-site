@@ -41,3 +41,10 @@
 .footer .copyright a {
     text-decoration: underline;
 }
+
+@media (max-width: 600px) {
+    .footer nav {
+        grid-template-columns: repeat(2, auto);
+        row-gap: 32px;
+    }
+}

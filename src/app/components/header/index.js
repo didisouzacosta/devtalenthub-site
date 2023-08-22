@@ -19,11 +19,11 @@ export default function Header() {
                 </Link>
                 <ul role='list'>
                     <li><Link href="/home">Home</Link></li>
-                    <li><Link href="/about">About</Link></li>
-                    <li><Link href="/categories">Categories</Link></li>
+                    <li><Link href="/about-us">About us</Link></li>
+                    <li>Categories</li>
                     <li><Link href="/contact">Contact</Link></li>
                 </ul>
-                <Link href="/post_job" prefetch={true} className={utilStyles.button_primary}>Post a job</Link>
+                <Link href="/post-job" prefetch={true} className={utilStyles.button_primary}>Post a job</Link>
             </nav>
         </div>
     )
