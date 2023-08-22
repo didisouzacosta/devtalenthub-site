@@ -11,14 +11,15 @@
 .footer {
     max-width: 100%;
     width: var(--max-width);
+    border-top: 1px solid #e0e0ea;
+    padding-top: 64px;
 }
 
 .footer nav {
     display: grid;
     grid-template-columns: repeat(4, auto);
-    gap: 16px;
-    margin-top: 32px;
-    margin-bottom: 32px;
+    column-gap: 16px;
+    margin-bottom: 48px;
     justify-items: flex-start;
 }
 

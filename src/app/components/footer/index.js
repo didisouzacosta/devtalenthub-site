@@ -8,7 +8,6 @@ export default function Footer() {
     return (
         <footer className={styles.center}>
             <div className={styles.footer}>
-                <div>Newsletter</div>
                 <nav>
                     <div className={styles.column_wrapper}>
                         <h3>Pages</h3>
@@ -52,7 +51,7 @@ export default function Footer() {
                 </nav>
 
                 <div className={styles.copyright}>
-                    © Copyright DevTalentHub - Made with <Link href="https://nextjs.org" prefetch={false}>NextJS</Link> and <Link href="https://strapi.io" prefetch={false}>Strapi</Link>
+                    © Copyright DevTalentHub - Made with ❤️ using <Link href="https://nextjs.org" target="_blank" prefetch={false}>NextJS</Link> and <Link href="https://strapi.io" target="_blank" prefetch={false}>Strapi</Link>
                 </div>
             </div>
         </footer>
