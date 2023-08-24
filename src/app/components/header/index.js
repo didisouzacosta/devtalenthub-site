@@ -4,23 +4,121 @@ import Link from 'next/link'
 
 import utilStyles from '@/app/util/styles/util.module.css'
 import styles from './header.module.css'
+import Card from '../card'
+
+function CategoriesCard() {
+    return (
+        <div className={styles.categories_card}>
+            <Card>
+                <div className={styles.columns}>
+                    <div>
+                        <h3>Knowedges</h3>
+                        <ul>
+                            <li>
+                                <Link href={{
+                                    pathname: '/search',
+                                    query: { knowedge: 'swift' }
+                                }}>
+                                    Swift
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href={{
+                                    pathname: '/search',
+                                    query: { knowedge: 'swiftui' }
+                                }}>
+                                    SwiftUI
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href={{
+                                    pathname: '/search',
+                                    query: { knowedge: 'kotlin' }
+                                }}>
+                                    Kotlin
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href={{
+                                    pathname: '/search',
+                                    query: { knowedge: 'java' }
+                                }}>
+                                    Java
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href={{
+                                    pathname: '/search',
+                                    query: { knowedge: 'react-native' }
+                                }}>
+                                    React&nbsp;Native
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href={{
+                                    pathname: '/search',
+                                    query: { knowedge: 'flutter' }
+                                }}>
+                                    Flutter
+                                </Link>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div>
+                        <h3>Level</h3>
+                        <ul>
+                            <li>
+                                <Link href={{
+                                    pathname: '/search',
+                                    query: { level: 'junior' }
+                                }}>
+                                    Junior
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href={{
+                                    pathname: '/search',
+                                    query: { level: 'pleno' }
+                                }}>
+                                    Pleno
+                                </Link>
+                            </li>
+                            <li>
+                                <Link href={{
+                                    pathname: '/search',
+                                    query: { level: 'senior' }
+                                }}>
+                                    Senior
+                                </Link>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </Card>
+        </div>
+    )
+}
 
 export default function Header() {
     return (
         <div className={styles.center}>
             <nav className={styles.nav}>
-                <Link href="/" className={styles.brand}>
-                    <Image 
-                    src="https://assets.website-files.com/60c77302fcfa2b84ab595f64/60da7a7b304772e2954fe9e4_job-board-x-logo-webflow-template-2.svg"
-                    width={200}
-                    height={50}
-                    alt="DevTalentHub"
-                />
+                <Link href="/home" className={styles.brand}>
+                    <Image
+                        src="https://assets.website-files.com/60c77302fcfa2b84ab595f64/60da7a7b304772e2954fe9e4_job-board-x-logo-webflow-template-2.svg"
+                        width={200}
+                        height={50}
+                        alt="DevTalentHub"
+                    />
                 </Link>
                 <ul role='list'>
                     <li><Link href="/home">Home</Link></li>
                     <li><Link href="/about-us">About us</Link></li>
-                    <li>Categories</li>
+                    <li className={styles.categories}>
+                        <span>Categories</span>
+                        <CategoriesCard />
+                    </li>
                     <li><Link href="/contact">Contact</Link></li>
                 </ul>
                 <Link href="/post-job" prefetch={true} className={utilStyles.button_primary}>Post a job</Link>
