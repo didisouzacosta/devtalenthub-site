@@ -1,3 +1,4 @@
+import PageContent from "../components/page_content"
 
 export const metadata = {
     title: 'Search',
@@ -6,8 +7,8 @@ export const metadata = {
 
 export default function SearchLayout({ children }) {
     return (
-        <section>
+        <PageContent>
             {children}
-        </section>
+        </PageContent>
     )
 }

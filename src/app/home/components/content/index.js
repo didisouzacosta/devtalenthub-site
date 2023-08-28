@@ -6,10 +6,11 @@ import PostJobCard from '../post-job-card'
 import CompaniesCard from '../companies-card'
 
 import styles from './content.module.css'
+import PageContent from '@/app/components/page_content'
 
 export default function Content() {
     return (
-        <div className={styles.container}>
+        <PageContent>
             <div className={styles.grid}>
                 <JobList />
                 <div className={styles.column}>
@@ -18,6 +19,6 @@ export default function Content() {
                     <CompaniesCard />
                 </div>
             </div>
-        </div>
+        </PageContent>
     )
 }

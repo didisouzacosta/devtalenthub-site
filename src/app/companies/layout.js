@@ -1,3 +1,4 @@
+import PageContent from "../components/page_content"
 
 export const metadata = {
     title: 'Companies',
@@ -6,8 +7,8 @@ export const metadata = {
 
 export default function CompaniesLayout({ children }) {
     return (
-        <section>
+        <PageContent>
             {children}
-        </section>
+        </PageContent>
     )
 }

@@ -1,3 +1,5 @@
+import PageContent from "@/app/components/page_content"
+
 export const metadata = {
     title: 'About Us',
     description: 'Think a little bit more about us',
@@ -5,8 +7,8 @@ export const metadata = {
 
 export default function AboutLayout({ children }) {
     return (
-        <section>
+        <PageContent>
             {children}
-        </section>
+        </PageContent>
     )
 }
