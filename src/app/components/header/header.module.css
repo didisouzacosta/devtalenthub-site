@@ -35,16 +35,16 @@
 .nav ul li.categories span {
   cursor: pointer;
 }
-.nav ul li.categories span:hover {
+.nav ul li.categories>span:hover {
   color: #0162ff;
 }
 
 .categories_card {
   position: absolute;
-  margin-top: 16px;
-  margin-left: -80%;
-  visibility: hidden;
   display: grid;
+  top: 48px;
+  left: 0px;
+  visibility: hidden;
   opacity: 0;
   transform: translateY(-1%);
   transition: all ease 0.2s;
