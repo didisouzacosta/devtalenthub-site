@@ -7,7 +7,7 @@
     margin-top: -70px;
     padding: var(--padding-extra-large);
     border: 1px solid #e0e0ea;
-    border-radius: 1.4rem;
+    border-radius: 16px;
     background-color: white;
     width: 100%;
     max-width: var(--max-width);

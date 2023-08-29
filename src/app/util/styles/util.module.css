@@ -4,6 +4,7 @@
     border-radius: 2rem;
     color: white;
     background-color: #0162ff;
+    justify-self: flex-start;
     font-weight: bolder;
     transition: all ease 0.2s;
 }

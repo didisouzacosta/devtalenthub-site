@@ -1,4 +1,33 @@
-.separator {
-    margin: 32px auto;
+.content {
+    display: grid;
+    row-gap: 32px;
+}
+
+.header {
+    display: grid;
+    row-gap: 32px;
+}
+
+.header .title {
+    display: flex;
+    vertical-align: middle;
+}
+
+.header .title h1 {
+    margin-right: auto;
+    margin-top: 8px;
+    font-size: 32px;
+}
+
+.header .title .brand{
+    display: inline-block;
+    border: 1px solid #e0e0ea;
+    border-radius: 8px;
+    margin-left: 16px;
+}
+
+.infos {
     border-top: 1px solid #e0e0ea;
+    border-bottom: 1px solid #e0e0ea;
+    padding: 28px 0;
 }

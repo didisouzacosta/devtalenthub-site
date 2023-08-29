@@ -18,7 +18,7 @@
     column-gap: 8px;
     padding: var(--padding);
     border: 1px solid #e0e0ea;
-    border-radius: 1rem;
+    border-radius: 16px;
     transition: all ease 0.2s;
     box-shadow: rgba(0, 0, 0, 0.04) 0px 4px 12px;
     background-color: white;
