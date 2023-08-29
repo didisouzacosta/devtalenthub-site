@@ -1,7 +1,11 @@
+import Link from 'next/link'
+
 import Card from '@/app/components/card'
-import styles from './job.module.css'
 import MoreJobs from './components/more_jobs'
 import JobDescription from './components/job_description'
+
+import utilStyles from '@/app/util/styles/util.module.css'
+import styles from './job.module.css'
 
 export default function Job({ params }) {
     return (
@@ -13,6 +17,8 @@ export default function Job({ params }) {
             <div className={styles.column}>
                 <Card>
                     <h3>Apply now</h3>
+                    <p>Please let Webflow know that you found this position on our job board, as that is a great way to support us, so we can keep posting cool jobs every day.</p>
+                    <Link href="/post-job" prefetch={true} className={utilStyles.button_primary}>Apply now</Link>
                 </Card>
             </div>
         </div>
