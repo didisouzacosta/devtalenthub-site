@@ -22,7 +22,7 @@ function JobListItem({ isFeatured }) {
                     alt="Google"
                 />
                 <div>
-                    <span><strong>Job title</strong></span>
+                    <span className={styles.job_title}><strong>Job title</strong></span>
                     <span className={styles.company_link}>Company</span>
                 </div>
             </div>

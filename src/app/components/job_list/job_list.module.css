@@ -53,6 +53,10 @@
     border-radius: 8px;
 }
 
+.job_list_item .company_wrapper .job_title{
+    margin-bottom: 0.5rem;
+}
+
 .job_list_item .column_wrapper{
     margin-top: 16px;
     margin-bottom: 16px;
@@ -72,6 +76,7 @@
     font-size: 14px;
     color: gray;
     font-weight: 300;
+    margin-bottom: 0.5rem;
 }
 
 @media (max-width: 600px) {
