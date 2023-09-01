@@ -1,38 +1,51 @@
 ---
-title: iOS Mobile Developer Pleno
+title: Mobile Developer Pleno a Sênior (Remoto)
 description: Customizing active links using useRouter()
+brand: https://assets.website-files.com/60c77302fcfa2bdb6e595f76/60c7c7ea645b46e9836da40c_icon-4-company-job-board-x-template.svg
+apply_url: https://www.geekhunter.com.br/vaga/mobile-developer-pleno-a-senior-remoto?utm_source=linkedin&utm_medium=referral&utm_campaign=57605
 isPublished: true
-publishedDate: 2022/07/22
+publishedDate: 2023/01/09
 tags:
   - next
 ---
 
-Crossover is the world's #1 source of full-time remote jobs. Our clients offer top-tier pay for top-tier talent. We're recruiting this role for our client, gt.school. Have you got what it takes?
+Esta é uma vaga de um cliente da GeekHunter, candidate-se para ter acesso às informações completas sobre a empresa.
 
-gt.school is pioneering the delivery of 100% computer-based education to K-12 students through the use of generative AI!
+- Construir novas APIs.
+- Desenvolvedor novas features.
+- Ser a liderança técnica da equipe.
+- Ser responsável pela qualidade de código
+- Integração com apple pay
+- Integração com samsung pay
+- Ter a nossa cultura;
+- Relevante experiência hands-on com Flutter
+- Swift 5+ e desenvolvimento iOS;
+- Conhecimento de Design Patterns, Orientação a Objetos, Clean Code e boas práticas de programação;
+- Conhecimento de versionamento utilizando GitFlow.
+- Testes unitários
+- Integração com Apis REST
 
-We are looking for a senior mobile developer to help us build a learning app that's as easy to use as TikTok and knows what the student knows and doesn't know when it comes to serving learning content, as well as TikTok knows what its users like or don't like when it comes to serving videos.
+#### Desejável, Mas Não Eliminatório
 
-Join us in what is likely the next revolution in education - a school where kids learn on their own, at their own pace, using adaptive learning apps, without having to be in a physical classroom that's going either too fast or too slow for them.
+- Conhecimento de Auto-Layout, utilizando XIB, ViewCode, Storyboard.
+- Modularização de componentes e código.
+- Conhecimento de testes instrumentados
+- Conhecimento em SOLID;
+- Utilização de Cocoapods
 
-#### What You Will Be Doing
+#### Plus
 
-Architect and implement features as per detailed product specs and high-fidelity designs
+- Automação com CI/CD
+- Banco de dados local(CoreData, Realm, Keychain…)
+- Automação de testes em Appium
+- Gerenciamento de memória
 
-#### What You Won’t Be Doing
+#### Habilidades Obrigatórias
 
-Fussing over UI/UX design details; these are handled by a dedicated design team.
-Endlessly debating functional requirements or feature priorities; these are well defined, in small increments
+- Flutter
+- Swift (iOS)
 
-#### Mobile Engineer Key Responsibilities
+#### Habilidades Desejáveis
 
-- Delivering clean, well-designed code in small functional increments.
-- Making key implementation decisions, and describing your rationale.
-- Contributing to continuous process improvement
-- Detecting and correcting creeping technical debt
-
-#### Basic Requirements
-
-- Minimum 5 years of experience developing mobile applications
-- Minimum 2 years in a leadership role, making technical design decisions for mobile applications
-- Experience with the following cross-platform app development frameworks: React Native.
+- Continuous Integration/Deployment(CI/CD)
+- Programação Orientada a Objeto

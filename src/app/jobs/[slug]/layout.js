@@ -1,8 +1,13 @@
+import { get } from "@/app/api/vacancy-api"
 import PageContent from "@/app/components/page_content"
 
-export const metadata = {
-    title: 'Job',
-    description: 'Your new job is here',
+export async function generateMetadata({ params: { slug } }) {
+    let { frontmatter } = get(slug)
+
+    return {
+        title: frontmatter.title,
+        description: frontmatter.description,
+    }
 }
 
 export default function JobLayout({ children }) {
