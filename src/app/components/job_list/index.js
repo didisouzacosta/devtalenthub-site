@@ -4,8 +4,11 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 import styles from './job_list.module.css'
+import { getAll } from '@/app/api/vacancy-api'
 
-function JobListItem({ isFeatured }) {
+function JobListItem({ vacancy, isFeatured }) {
+    const frontmatter = vacancy.frontmatter
+
     return (
         <Link
             href='/jobs/ios-dev-pleno-google'
@@ -14,7 +17,7 @@ function JobListItem({ isFeatured }) {
         >
             <div className={styles.company_wrapper}>
                 <Image
-                    src="https://assets.website-files.com/60c77302fcfa2bdb6e595f76/60c7c7ea645b46e9836da40c_icon-4-company-job-board-x-template.svg"
+                    src={frontmatter.brand}
                     className={styles.brand}
                     width={80}
                     height={80}
@@ -22,44 +25,41 @@ function JobListItem({ isFeatured }) {
                     alt="Google"
                 />
                 <div>
-                    <span className={styles.job_title}><strong>Job title</strong></span>
-                    <span className={styles.company_link}>Company</span>
+                    <span className={styles.job_title}><strong>{frontmatter.title}</strong></span>
+                    <span className={styles.company_link}>{frontmatter.company}</span>
                 </div>
             </div>
             <div className={styles.column_wrapper}>
                 <p className={styles.title}>Location</p>
-                <strong>Remote</strong>
+                <strong>{frontmatter.location}</strong>
             </div>
             <div className={styles.column_wrapper}>
-                <p className={styles.title}>Knowedge</p>
-                <strong>Pleno/Senior</strong>
+                <p className={styles.title}>Level</p>
+                <strong>{frontmatter.level}</strong>
             </div>
             <div className={styles.column_wrapper}>
                 <p className={styles.title}>Language</p>
-                <strong>Swift</strong>
+                <strong>{frontmatter.language}</strong>
             </div>
         </Link>
     )
 }
 
 export default function JobList() {
+    const vacancies = getAll()
+
     return (
         <section className={styles.container}>
             <div className={styles.job_list}>
                 <div className={styles.job_list_items}>
                     <h2>Featured jobs</h2>
-                    <JobListItem isFeatured={true} />
-                    <JobListItem isFeatured={true} />
+                    {/* <JobListItem isFeatured={true} />
+                    <JobListItem isFeatured={true} /> */}
                 </div>
 
                 <div className={styles.job_list_items}>
                     <h2>Latest jobs</h2>
-                    <JobListItem />
-                    <JobListItem />
-                    <JobListItem />
-                    <JobListItem />
-                    <JobListItem />
-                    <JobListItem />
+                    { vacancies.map((vacancy) => <JobListItem vacancy={vacancy} />) }
                 </div>
             </div>
         </section>

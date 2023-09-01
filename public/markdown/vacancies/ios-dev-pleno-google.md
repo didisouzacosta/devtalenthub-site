@@ -1,8 +1,12 @@
 ---
 title: Mobile Developer Pleno a Sênior (Remoto)
+company: GeekHunter
 description: Customizing active links using useRouter()
-brand: https://assets.website-files.com/60c77302fcfa2bdb6e595f76/60c7c7ea645b46e9836da40c_icon-4-company-job-board-x-template.svg
+brand: https://media.licdn.com/dms/image/C4D0BAQG2XGgLZcngtQ/company-logo_100_100/0/1677589311949?e=1701907200&v=beta&t=vpfrSG5Y53vjXFO1HTi0VwsxNmZoCMHW-SFvyT_1MvI
 apply_url: https://www.geekhunter.com.br/vaga/mobile-developer-pleno-a-senior-remoto?utm_source=linkedin&utm_medium=referral&utm_campaign=57605
+location: Remote
+language: Swift
+level: Pleno/Senior
 isPublished: true
 publishedDate: 2023/01/09
 tags:
