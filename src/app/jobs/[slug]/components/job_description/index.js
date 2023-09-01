@@ -13,9 +13,9 @@ export default function JobDescription({ params: { frontmatter, content } }) {
             <article className={styles.content}>
                 <div className={styles.header}>
                     <div className={styles.title}>
-                        <h1>{ frontmatter.title }</h1>
+                        <h1>{frontmatter.title}</h1>
                         <Image
-                            src="https://media.licdn.com/dms/image/C4D0BAQG2XGgLZcngtQ/company-logo_100_100/0/1677589311949?e=1701907200&v=beta&t=vpfrSG5Y53vjXFO1HTi0VwsxNmZoCMHW-SFvyT_1MvI"
+                            src={frontmatter.brand}
                             className={styles.brand}
                             width={60}
                             height={60}
