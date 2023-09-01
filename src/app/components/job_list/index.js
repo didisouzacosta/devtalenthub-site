@@ -4,14 +4,15 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 import styles from './job_list.module.css'
-import { getAll } from '@/app/api/vacancy-api'
+import { getAllFeatured, getAllLatest } from '@/app/api/vacancy-api'
 
-function VacancyListItem({ vacancy, isFeatured }) {
+function VacancyListItem({ vacancy, slug }) {
     const frontmatter = vacancy.frontmatter
+    const isFeatured = frontmatter.isFeatured
 
     return (
         <Link
-            href='/jobs/ios-dev-pleno-google'
+            href={`/jobs/${slug}`}
             prefetch={isFeatured}
             className={`${styles.job_list_item} ${isFeatured ? styles.featured : ''}`}
         >
@@ -46,20 +47,20 @@ function VacancyListItem({ vacancy, isFeatured }) {
 }
 
 export default function VacancyList() {
-    const vacancies = getAll()
+    const allFeatured = getAllFeatured()
+    const allLatest = getAllLatest()
 
     return (
         <section className={styles.container}>
             <div className={styles.job_list}>
                 <div className={styles.job_list_items}>
                     <h2>Featured jobs</h2>
-                    {/* <JobListItem isFeatured={true} />
-                    <JobListItem isFeatured={true} /> */}
+                    { allFeatured.map((vacancy) => <VacancyListItem vacancy={vacancy} slug={vacancy.slug} />) }
                 </div>
 
                 <div className={styles.job_list_items}>
                     <h2>Latest jobs</h2>
-                    { vacancies.map((vacancy) => <VacancyListItem vacancy={vacancy} />) }
+                    { allLatest.map((vacancy) => <VacancyListItem vacancy={vacancy} slug={vacancy.slug} />) }
                 </div>
             </div>
         </section>
