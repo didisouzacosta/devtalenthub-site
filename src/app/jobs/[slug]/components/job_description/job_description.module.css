@@ -16,10 +16,9 @@
 .header .title h1 {
     margin-right: auto;
     margin-top: 8px;
-    font-size: 32px;
 }
 
-.header .title .brand{
+.header .title .brand {
     display: inline-block;
     border: 1px solid #e0e0ea;
     border-radius: 8px;
@@ -30,4 +29,8 @@
     border-top: 1px solid #e0e0ea;
     border-bottom: 1px solid #e0e0ea;
     padding: 28px 0;
+}
+
+.description {
+    color: #0F0F0F;
 }
