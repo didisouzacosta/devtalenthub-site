@@ -36,11 +36,11 @@ function VacancyListItem({ vacancy, slug }) {
             </div>
             <div className={styles.column_wrapper}>
                 <p className={styles.title}>Level</p>
-                <strong>{frontmatter.levels.join("/")}</strong>
+                <strong>{frontmatter.levels?.join("/")}</strong>
             </div>
             <div className={styles.column_wrapper}>
                 <p className={styles.title}>Language</p>
-                <strong>{frontmatter.languages.join("/")}</strong>
+                <strong>{frontmatter.languages?.join("/")}</strong>
             </div>
         </Link>
     )
