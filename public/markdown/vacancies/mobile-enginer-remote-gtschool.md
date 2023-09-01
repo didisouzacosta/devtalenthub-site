@@ -5,8 +5,11 @@ description: Customizing active links using useRouter()
 brand: https://media.licdn.com/dms/image/C4E0BAQG8bdX5sQ24KQ/company-logo_200_200/0/1620025336126?e=1701907200&v=beta&t=XNX6IdejI_MsReZNOPAmV2ZfBfRb6tP7C8PiRhk_4AA
 apply_url: https://www.linkedin.com/jobs/view/3704509786/?alternateChannel=search&refId=nAVNRoO919mjDUsLHmtfbA%3D%3D&trackingId=cmyzZk67bpzKMrGii3KLVg%3D%3D
 location: Remote
-language: Swift
-level: Pleno/Senior
+languages: 
+  - Swift
+levels: 
+  - Pleno
+  - Senior
 isFeatured: true
 isPublished: true
 publishedDate: 2023/01/09

@@ -5,8 +5,12 @@ description: Customizing active links using useRouter()
 brand: https://media.licdn.com/dms/image/C4D0BAQG2XGgLZcngtQ/company-logo_100_100/0/1677589311949?e=1701907200&v=beta&t=vpfrSG5Y53vjXFO1HTi0VwsxNmZoCMHW-SFvyT_1MvI
 apply_url: https://www.geekhunter.com.br/vaga/mobile-developer-pleno-a-senior-remoto?utm_source=linkedin&utm_medium=referral&utm_campaign=57605
 location: Remote
-language: Swift
-level: Pleno/Senior
+languages: 
+  - Swift
+  - Flutter
+levels: 
+  - Pleno
+  - Senior
 isPublished: true
 publishedDate: 2023/01/09
 tags:
