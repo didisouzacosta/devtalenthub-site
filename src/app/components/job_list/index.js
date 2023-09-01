@@ -6,7 +6,7 @@ import Link from 'next/link'
 import styles from './job_list.module.css'
 import { getAll } from '@/app/api/vacancy-api'
 
-function JobListItem({ vacancy, isFeatured }) {
+function VacancyListItem({ vacancy, isFeatured }) {
     const frontmatter = vacancy.frontmatter
 
     return (
@@ -45,7 +45,7 @@ function JobListItem({ vacancy, isFeatured }) {
     )
 }
 
-export default function JobList() {
+export default function VacancyList() {
     const vacancies = getAll()
 
     return (
@@ -59,7 +59,7 @@ export default function JobList() {
 
                 <div className={styles.job_list_items}>
                     <h2>Latest jobs</h2>
-                    { vacancies.map((vacancy) => <JobListItem vacancy={vacancy} />) }
+                    { vacancies.map((vacancy) => <VacancyListItem vacancy={vacancy} />) }
                 </div>
             </div>
         </section>
