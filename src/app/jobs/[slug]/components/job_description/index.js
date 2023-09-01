@@ -31,7 +31,7 @@ export default function JobDescription({ params: { frontmatter, content } }) {
                 <h2>Job description</h2>
                 <div className={styles.description} dangerouslySetInnerHTML={{ __html: md().render(content) }} />
                 </div>
-                <Link href={ frontmatter.apply_url } prefetch={false} className={utilStyles.button_primary}>
+                <Link href={ frontmatter.apply_url } target="_blank" prefetch={false} className={utilStyles.button_primary}>
                     Apply now
                 </Link>
             </article>
