@@ -113,7 +113,7 @@ export default function Footer() {
                 </nav>
 
                 <div className={styles.copyright}>
-                    © Copyright DevTalentHub - Made with ❤️ using <Link href="https://nextjs.org" target="_blank" prefetch={false}>NextJS</Link> and <Link href="https://strapi.io" target="_blank" prefetch={false}>Strapi</Link>
+                    © Copyright DevTalentHub - Made with ❤️ using <Link href="https://nextjs.org" target="_blank" prefetch={false}>NextJS</Link>.
                 </div>
             </div>
         </footer>
