@@ -14,7 +14,7 @@
 
 .job_list_item {
     display: grid;
-    grid-template-columns: repeat(4, auto);
+    grid-template-columns: 47% 13% 18% 32%;
     column-gap: 16px;
     padding: var(--padding);
     border: 1px solid #e0e0ea;
@@ -62,16 +62,6 @@
     margin-bottom: 16px;
 }
 
-.job_list_item .column_wrapper{
-    margin-top: 16px;
-    margin-bottom: 16px;
-}
-
-.job_list_item .column_wrapper{
-    margin-top: 16px;
-    margin-bottom: 16px;
-}
-
 .job_list_item .column_wrapper p.title{
     font-size: 14px;
     color: gray;
@@ -79,7 +69,7 @@
     margin-bottom: 0.5rem;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1000px) {
     .job_list_item {
         grid-template-columns: repeat(3, auto);
     }

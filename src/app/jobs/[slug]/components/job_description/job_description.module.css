@@ -34,3 +34,12 @@
 .description {
     color: #0F0F0F;
 }
+
+.description h1,
+.description h2,
+.description h3,
+.description h4,
+.description h5,
+.description h6 {
+  margin-top: 2rem;
+}
