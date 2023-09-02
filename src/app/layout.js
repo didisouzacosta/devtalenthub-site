@@ -3,16 +3,20 @@ import { Inter } from 'next/font/google'
 
 import Header from './components/header'
 import Footer from './components/footer'
+import { getAllLanguages, getAllLevels } from './api/vacancy-api'
 
 const inter = Inter({ subsets: ['latin'] })
 
 export default function RootLayout({ children }) {
+  const languages = getAllLanguages()
+  const levels = getAllLevels()
+
   return (
     <html lang="en">
       <body className={inter.className}>
-        <Header />
+        <Header languages={languages} levels={levels} />
         {children}
-        <Footer />
+        <Footer languages={languages} levels={levels} />
       </body>
     </html>
   )

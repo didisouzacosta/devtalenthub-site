@@ -4,7 +4,7 @@ import Link from 'next/link'
 
 import styles from './footer.module.css'
 
-export default function Footer() {
+export default function Footer({ languages, levels }) {
     return (
         <footer className={styles.center}>
             <div className={styles.footer}>
@@ -20,86 +20,38 @@ export default function Footer() {
                     </div>
 
                     <div className={styles.column_wrapper}>
-                        <h3>Knowedges</h3>
+                        <h3>Languages</h3>
                         <ul>
-                            <li>
-                                <Link href={{
-                                    pathname: '/search',
-                                    query: { knowedge: 'swift' }
-                                }}>
-                                    Swift
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href={{
-                                    pathname: '/search',
-                                    query: { knowedge: 'swiftui' }
-                                }}>
-                                    SwiftUI
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href={{
-                                    pathname: '/search',
-                                    query: { knowedge: 'kotlin' }
-                                }}>
-                                    Kotlin
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href={{
-                                    pathname: '/search',
-                                    query: { knowedge: 'java' }
-                                }}>
-                                    Java
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href={{
-                                    pathname: '/search',
-                                    query: { knowedge: 'react-native' }
-                                }}>
-                                    React Native
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href={{
-                                    pathname: '/search',
-                                    query: { knowedge: 'flutter' }
-                                }}>
-                                    Flutter
-                                </Link>
-                            </li>
+                            {
+                                languages?.map((language) => (
+                                    <li>
+                                        <Link href={{
+                                            pathname: '/search',
+                                            query: { language: language.queryString }
+                                        }}>
+                                            {language.value}
+                                        </Link>
+                                    </li>
+                                ))
+                            }
                         </ul>
                     </div>
 
                     <div className={styles.column_wrapper}>
                         <h3>Level</h3>
                         <ul>
-                            <li>
-                                <Link href={{
-                                    pathname: '/search',
-                                    query: { level: 'junior' }
-                                }}>
-                                    Junior
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href={{
-                                    pathname: '/search',
-                                    query: { level: 'pleno' }
-                                }}>
-                                    Pleno
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href={{
-                                    pathname: '/search',
-                                    query: { level: 'senior' }
-                                }}>
-                                    Senior
-                                </Link>
-                            </li>
+                            {
+                                levels?.map((level) => (
+                                    <li>
+                                        <Link href={{
+                                            pathname: '/search',
+                                            query: { level: level.queryString }
+                                        }}>
+                                            {level.value}
+                                        </Link>
+                                    </li>
+                                ))
+                            }
                         </ul>
                     </div>
 

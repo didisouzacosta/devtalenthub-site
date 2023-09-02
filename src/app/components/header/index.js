@@ -5,93 +5,46 @@ import Link from 'next/link'
 import utilStyles from '@/app/util/styles/util.module.css'
 import styles from './header.module.css'
 import Card from '../card'
+import { getAllLanguages, getAllLevels } from '@/app/api/vacancy-api'
 
-function CategoriesCard() {
+function CategoriesCard({ languages, levels }) {
     return (
         <div className={styles.categories_card}>
             <Card>
                 <div className={styles.columns}>
                     <div>
-                        <h3>Knowedges</h3>
+                        <h3>Languages</h3>
                         <ul>
-                            <li>
-                                <Link href={{
-                                    pathname: '/search',
-                                    query: { knowedge: 'swift' }
-                                }}>
-                                    Swift
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href={{
-                                    pathname: '/search',
-                                    query: { knowedge: 'swiftui' }
-                                }}>
-                                    SwiftUI
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href={{
-                                    pathname: '/search',
-                                    query: { knowedge: 'kotlin' }
-                                }}>
-                                    Kotlin
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href={{
-                                    pathname: '/search',
-                                    query: { knowedge: 'java' }
-                                }}>
-                                    Java
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href={{
-                                    pathname: '/search',
-                                    query: { knowedge: 'react-native' }
-                                }}>
-                                    React&nbsp;Native
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href={{
-                                    pathname: '/search',
-                                    query: { knowedge: 'flutter' }
-                                }}>
-                                    Flutter
-                                </Link>
-                            </li>
+                            {
+                                languages?.map((language) => (
+                                    <li>
+                                        <Link href={{
+                                            pathname: '/search',
+                                            query: { language: language.queryString }
+                                        }}>
+                                            {language.value}
+                                        </Link>
+                                    </li>
+                                ))
+                            }
                         </ul>
                     </div>
 
                     <div>
                         <h3>Level</h3>
                         <ul>
-                            <li>
-                                <Link href={{
-                                    pathname: '/search',
-                                    query: { level: 'junior' }
-                                }}>
-                                    Junior
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href={{
-                                    pathname: '/search',
-                                    query: { level: 'pleno' }
-                                }}>
-                                    Pleno
-                                </Link>
-                            </li>
-                            <li>
-                                <Link href={{
-                                    pathname: '/search',
-                                    query: { level: 'senior' }
-                                }}>
-                                    Senior
-                                </Link>
-                            </li>
+                            {
+                                levels?.map((level) => (
+                                    <li>
+                                        <Link href={{
+                                            pathname: '/search',
+                                            query: { level: level.queryString }
+                                        }}>
+                                            {level.value}
+                                        </Link>
+                                    </li>
+                                ))
+                            }
                         </ul>
                     </div>
                 </div>
@@ -100,7 +53,7 @@ function CategoriesCard() {
     )
 }
 
-export default function Header() {
+export default function Header({ levels, languages }) {
     return (
         <div className={styles.center}>
             <nav className={styles.nav}>
@@ -117,7 +70,7 @@ export default function Header() {
                     <li><Link href="/about-us">About us</Link></li>
                     <li className={styles.categories}>
                         <span>Categories</span>
-                        <CategoriesCard />
+                        <CategoriesCard levels={levels} languages={languages} />
                     </li>
                     <li><Link href="/contact">Contact</Link></li>
                 </ul>
