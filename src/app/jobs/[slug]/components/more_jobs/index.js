@@ -1,8 +1,8 @@
-import VacancyList from '@/app/components/job_list'
+import JobList from '@/app/components/job_list'
 import styles from './more_jobs.module.css'
 
 export default function MoreJobs() {
     return(
-        <VacancyList />
+        <JobList />
     )
 }

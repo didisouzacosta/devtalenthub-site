@@ -1,6 +1,6 @@
 import Link from 'next/link'
 
-import { get } from '@/app/api/vacancy-api'
+import { get } from '@/app/api/job-api'
 
 import Card from '@/app/components/card'
 import MoreJobs from './components/more_jobs'

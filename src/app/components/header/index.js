@@ -5,7 +5,7 @@ import Link from 'next/link'
 import utilStyles from '@/app/util/styles/util.module.css'
 import styles from './header.module.css'
 import Card from '../card'
-import { getAllLanguages, getAllLevels } from '@/app/api/vacancy-api'
+import { getAllLanguages, getAllLevels } from '@/app/api/job-api'
 
 function CategoriesCard({ languages, levels }) {
     return (

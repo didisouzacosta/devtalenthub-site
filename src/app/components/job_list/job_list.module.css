@@ -15,7 +15,7 @@
 .job_list_item {
     display: grid;
     grid-template-columns: repeat(4, auto);
-    column-gap: 8px;
+    column-gap: 16px;
     padding: var(--padding);
     border: 1px solid #e0e0ea;
     border-radius: 16px;

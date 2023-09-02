@@ -4,10 +4,10 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 import styles from './job_list.module.css'
-import { getAllFeatured, getAllLatest } from '@/app/api/vacancy-api'
+import { getAllFeatured, getAllLatest } from '@/app/api/job-api'
 
-function VacancyListItem({ vacancy, slug }) {
-    const frontmatter = vacancy.frontmatter
+function JobListItem({ job, slug }) {
+    const frontmatter = job.frontmatter
     const isFeatured = frontmatter.isFeatured
 
     return (
@@ -46,7 +46,7 @@ function VacancyListItem({ vacancy, slug }) {
     )
 }
 
-export default function VacancyList() {
+export default function JobList() {
     const allFeatured = getAllFeatured()
     const allLatest = getAllLatest()
 
@@ -55,12 +55,12 @@ export default function VacancyList() {
             <div className={styles.job_list}>
                 <div className={styles.job_list_items}>
                     <h2>Featured jobs</h2>
-                    { allFeatured.map((vacancy) => <VacancyListItem vacancy={vacancy} slug={vacancy.slug} />) }
+                    { allFeatured.map((job) => <JobListItem job={job} slug={job.slug} />) }
                 </div>
 
                 <div className={styles.job_list_items}>
                     <h2>Latest jobs</h2>
-                    { allLatest.map((vacancy) => <VacancyListItem vacancy={vacancy} slug={vacancy.slug} />) }
+                    { allLatest.map((job) => <JobListItem job={job} slug={job.slug} />) }
                 </div>
             </div>
         </section>
