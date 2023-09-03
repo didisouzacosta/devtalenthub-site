@@ -40,6 +40,8 @@ export const getAllCompanies = () => {
     return companies
 }
 
+export const getFeaturedCompanies = (limit = 7) => getAllCompanies().splice(0, limit)
+
 export const find = () => {
     return []
 }

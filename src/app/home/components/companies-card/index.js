@@ -6,7 +6,7 @@ import Link from 'next/link'
 import Card from "../../../components/card";
 
 import styles from './companies_card.module.css'
-import { getAllCompanies } from '@/app/api/job-api';
+import { getAllCompanies, getFeaturedCompanies } from '@/app/api/job-api';
 
 function CompanyListItem({ company }) {
     return (
@@ -26,7 +26,7 @@ function CompanyListItem({ company }) {
 }
 
 export default function CompaniesCard() {
-    const companies = getAllCompanies()
+    const companies = getFeaturedCompanies()
 
     return (
         <Card>
