@@ -1,6 +1,6 @@
 ---
 title: Senior iOS Developer
-company: Gigster Network
+company: Verity
 description: Customizing active links using useRouter()
 brand: https://media.licdn.com/dms/image/D4D0BAQHd3d_EWQJiKw/company-logo_100_100/0/1688248942809?e=1701907200&v=beta&t=ReN9JxMQRI9dTPHZAqN_75F_fPvbqGM_StMTtBeyFHk
 apply_url: https://verity.gupy.io/job/eyJqb2JJZCI6NDg1MTgxNiwic291cmNlIjoibGlua2VkaW4ifQ==?jobBoardSource=linkedin

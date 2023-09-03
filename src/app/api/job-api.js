@@ -29,13 +29,15 @@ export const getAllLanguages = () => {
 }
 
 export const getAllCompanies = () => {
-    const languages = getAll()
-        .map((job) => job.frontmatter?.languages ?? [])
-        .reduce((acumulated, current) => acumulated.concat(current), []) 
-    const uniqueValues = [... new Set(languages)]
-    return uniqueValues.map((language) => { 
-        return { queryString: language.toLowerCase(), value: language } 
+    const companies = getAll().map((job) => {
+        const frontmatter = job.frontmatter
+        return { 
+            name: frontmatter?.company, 
+            brand: frontmatter?.brand 
+        }
     })
+
+    return companies
 }
 
 export const find = () => {

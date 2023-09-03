@@ -49,8 +49,7 @@
 .job_list_item .company_wrapper .brand{
     display: inline-block;
     margin-right: 16px;
-    border: 1px solid #e0e0ea;
-    border-radius: 8px;
+    border-radius: 10%;
 }
 
 .job_list_item .company_wrapper .job_title{

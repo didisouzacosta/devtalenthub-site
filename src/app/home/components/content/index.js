@@ -2,7 +2,6 @@
 
 import JobList from '@/app/components/job_list'
 import Banner300x400 from '@/app/components/ads/300x400'
-import PostJobCard from '../post-job-card'
 import CompaniesCard from '../companies-card'
 
 import styles from './content.module.css'
@@ -15,7 +14,6 @@ export default function Content() {
                 <JobList />
                 <div className={styles.column}>
                     <Banner300x400 />
-                    <PostJobCard />
                     <CompaniesCard />
                 </div>
             </div>
