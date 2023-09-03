@@ -9,7 +9,7 @@ export const getAllFeatured = () => getAllPublished().filter((job) => job.frontm
 export const getAllLatest = () => getAllPublished().filter((job) => job.frontmatter.isFeatured !== true)
 
 export const getAllLevels = () => {
-    const levels = getAll()
+    const levels = getAllPublished()
         .map((job) => job.frontmatter?.levels ?? [])
         .reduce((acumulated, current) => acumulated.concat(current), []) 
     const uniqueValues = [... new Set(levels)]
@@ -19,7 +19,7 @@ export const getAllLevels = () => {
 }
 
 export const getAllLanguages = () => {
-    const languages = getAll()
+    const languages = getAllPublished()
         .map((job) => job.frontmatter?.languages ?? [])
         .reduce((acumulated, current) => acumulated.concat(current), []) 
     const uniqueValues = [... new Set(languages)]
@@ -29,7 +29,7 @@ export const getAllLanguages = () => {
 }
 
 export const getAllCompanies = () => {
-    const companies = getAll().map((job) => {
+    const companies = getAllPublished().map((job) => {
         const frontmatter = job.frontmatter
         return { 
             name: frontmatter?.company, 
