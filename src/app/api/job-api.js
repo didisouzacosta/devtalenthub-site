@@ -29,7 +29,19 @@ export const getAllLanguages = () => {
 }
 
 export const getAllCompanies = () => {
-    const companies = getAllPublished().map((job) => {
+    const jobs = getAllPublished()
+    const companies = jobs.reduce((acumulated, current) => {
+        const company = current.frontmatter?.company
+        const contains = acumulated.some((job) => job.frontmatter?.company?.toLowerCase() === company?.toLowerCase())
+
+        if (!contains) {
+            acumulated.push(current)
+        }
+
+        return acumulated
+    }, [])
+
+    const formatedCompanies = companies.map((job) => {
         const frontmatter = job.frontmatter
         return { 
             name: frontmatter?.company, 
@@ -37,7 +49,7 @@ export const getAllCompanies = () => {
         }
     })
 
-    return companies
+    return formatedCompanies
 }
 
 export const getFeaturedCompanies = (limit = 7) => getAllCompanies().splice(0, limit)
