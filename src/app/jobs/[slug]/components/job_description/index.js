@@ -20,7 +20,7 @@ export default function JobDescription({ params: { frontmatter, content } }) {
                             width={60}
                             height={60}
                             priority="lazy"
-                            alt="Google"
+                            alt={frontmatter.company}
                         />
                     </div>
                     <div className={styles.infos}>
