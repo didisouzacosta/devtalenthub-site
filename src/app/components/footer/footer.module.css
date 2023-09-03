@@ -25,6 +25,7 @@
 
 .footer nav .column_wrapper ul {
     list-style: none;
+    margin-left: 0px;
 }
 
 .footer nav .column_wrapper ul li {

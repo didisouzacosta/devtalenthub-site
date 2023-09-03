@@ -67,11 +67,12 @@ export default function Header({ levels, languages }) {
                 </Link>
                 <ul role='list'>
                     <li><Link href="/home">Home</Link></li>
-                    <li><Link href="/about-us">About us</Link></li>
+                    <li><Link href='/companies'>Companies</Link></li>
                     <li className={styles.categories}>
                         <span>Categories</span>
                         <CategoriesCard levels={levels} languages={languages} />
                     </li>
+                    <li><Link href="/about-us">About us</Link></li>
                     <li><Link href="/contact">Contact</Link></li>
                 </ul>
                 <Link href="/post-job" prefetch={true} className={utilStyles.button_primary}>Post a job</Link>
