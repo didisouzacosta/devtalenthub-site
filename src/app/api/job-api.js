@@ -1,16 +1,16 @@
 import { getFiles, getFile } from '@/app/util/markdown.js'
 
-const folder = 'markdown/vacancies'
+const folder = 'markdown/jobs'
 
 export const get = (slug) => getFile(slug, folder)
 export const getAll = () => getFiles(folder)
-export const getAllPublished = () => getAll().filter((vancancy) => vancancy.frontmatter.isPublished === true)
-export const getAllFeatured = () => getAllPublished().filter((vancancy) => vancancy.frontmatter.isFeatured == true)
-export const getAllLatest = () => getAllPublished().filter((vancancy) => vancancy.frontmatter.isFeatured !== true)
+export const getAllPublished = () => getAll().filter((job) => job.frontmatter.isPublished === true)
+export const getAllFeatured = () => getAllPublished().filter((job) => job.frontmatter.isFeatured == true)
+export const getAllLatest = () => getAllPublished().filter((job) => job.frontmatter.isFeatured !== true)
 
 export const getAllLevels = () => {
     const levels = getAll()
-        .map((vacancy) => vacancy.frontmatter?.levels ?? [])
+        .map((job) => job.frontmatter?.levels ?? [])
         .reduce((acumulated, current) => acumulated.concat(current), []) 
     const uniqueValues = [... new Set(levels)]
     return uniqueValues.map((level) => { 
@@ -20,7 +20,17 @@ export const getAllLevels = () => {
 
 export const getAllLanguages = () => {
     const languages = getAll()
-        .map((vacancy) => vacancy.frontmatter?.languages ?? [])
+        .map((job) => job.frontmatter?.languages ?? [])
+        .reduce((acumulated, current) => acumulated.concat(current), []) 
+    const uniqueValues = [... new Set(languages)]
+    return uniqueValues.map((language) => { 
+        return { queryString: language.toLowerCase(), value: language } 
+    })
+}
+
+export const getAllCompanies = () => {
+    const languages = getAll()
+        .map((job) => job.frontmatter?.languages ?? [])
         .reduce((acumulated, current) => acumulated.concat(current), []) 
     const uniqueValues = [... new Set(languages)]
     return uniqueValues.map((language) => { 
