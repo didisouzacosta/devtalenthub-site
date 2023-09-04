@@ -7,7 +7,10 @@ import { getAllCompanies } from '@/app/api/job-api'
 function CompanyListItem({ company }) {
     return (
         <Link
-            href={`/jobs/`}
+            href={{
+                pathname: '/search',
+                query: { company: company.name }
+            }}
             className={styles.company_list_item}
         >
             <Image
