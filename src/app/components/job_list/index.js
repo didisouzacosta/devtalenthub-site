@@ -9,8 +9,6 @@ function JobListItem({ job, slug, key }) {
     const frontmatter = job.frontmatter
     const isFeatured = frontmatter.isFeatured
 
-    console.log(key)
-
     return (
         <Link
             href={`/jobs/${slug}`}
@@ -24,7 +22,7 @@ function JobListItem({ job, slug, key }) {
                     width={80}
                     height={80}
                     priority="lazy"
-                    alt="Google"
+                    alt={frontmatter.company}
                 />
                 <div>
                     <span className={styles.job_title}><strong>{frontmatter.title}</strong></span>

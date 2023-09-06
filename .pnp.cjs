@@ -28,6 +28,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
         [null, {\
           "packageLocation": "./",\
           "packageDependencies": [\
+            ["@vercel/analytics", "npm:1.0.2"],\
             ["eslint", "npm:8.47.0"],\
             ["eslint-config-next", "virtual:8066805f78f26d6420f2b0852277c1ba6e065d01f343d896861e7da7537e9ca5cf9ca1269a7fb51c8dd8675d9a57f8dc111421d300a53f88ca90e2f6e2bd9f94#npm:13.4.17"],\
             ["gray-matter", "npm:4.0.3"],\
@@ -393,6 +394,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["@typescript-eslint/visitor-keys", "npm:6.4.0"],\
             ["@typescript-eslint/types", "npm:6.4.0"],\
             ["eslint-visitor-keys", "npm:3.4.3"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@vercel/analytics", [\
+        ["npm:1.0.2", {\
+          "packageLocation": "./.yarn/cache/@vercel-analytics-npm-1.0.2-4fd0537e29-5f596db6ed.zip/node_modules/@vercel/analytics/",\
+          "packageDependencies": [\
+            ["@vercel/analytics", "npm:1.0.2"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -2997,6 +3007,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./",\
           "packageDependencies": [\
             ["site", "workspace:."],\
+            ["@vercel/analytics", "npm:1.0.2"],\
             ["eslint", "npm:8.47.0"],\
             ["eslint-config-next", "virtual:8066805f78f26d6420f2b0852277c1ba6e065d01f343d896861e7da7537e9ca5cf9ca1269a7fb51c8dd8675d9a57f8dc111421d300a53f88ca90e2f6e2bd9f94#npm:13.4.17"],\
             ["gray-matter", "npm:4.0.3"],\
