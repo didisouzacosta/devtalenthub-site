@@ -16,7 +16,7 @@ export default function Content() {
     return (
         <PageContent>
             <div className={styles.grid}>
-                <div>
+                <div className={styles.jobsGroup}>
                     <JobList jobs={featuredJobs} title="Featured Jobs" />
                     <JobList jobs={latestJobs} title="Latest Jobs" />
                 </div>

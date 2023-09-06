@@ -1,6 +1,6 @@
 import JobList from "../components/job_list";
 
-import { getAllFeatured, getAllLatest, getAllPublished } from '@/app/api/job-api'
+import { getAllPublished } from '@/app/api/job-api'
 
 export default function Search() {
     const jobs = getAllPublished()

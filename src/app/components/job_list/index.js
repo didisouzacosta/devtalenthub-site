@@ -52,6 +52,7 @@ export default function JobList({ jobs, title }) {
         <section className={styles.container}>
             <div className={styles.job_list}>
                 <div className={styles.job_list_items}>
+                    { title && <h2>{title}</h2> }
                     { jobListItems }
                 </div>
             </div>

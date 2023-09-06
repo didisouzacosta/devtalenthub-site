@@ -10,6 +10,11 @@
     row-gap: 16px;
 }
 
+.jobsGroup {
+    display: grid;
+    gap: 48px;
+}
+
 @media (max-width: 600px) {
     .grid {
         display: grid;
