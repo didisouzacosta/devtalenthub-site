@@ -46,10 +46,7 @@ function JobListItem({ job, slug, key }) {
 }
 
 export default function JobList({ jobs, title }) {
-    const jobListItems = jobs?.map((job, index) => {
-        console.log(index)
-        return <JobListItem job={job} slug={job.slug} key={index} />
-    })
+    const jobListItems = jobs?.map((job, index) => <JobListItem job={job} slug={job.slug} key={index} />)
 
     return (
         <section className={styles.container}>
