@@ -4,7 +4,7 @@ import Link from 'next/link'
 import styles from './companies.module.css'
 import { getAllCompanies } from '@/app/api/job-api'
 
-function CompanyListItem({ company }) {
+function CompanyListItem({ company, key }) {
     return (
         <Link
             href={{
@@ -12,6 +12,7 @@ function CompanyListItem({ company }) {
                 query: { company: company.name }
             }}
             className={styles.company_list_item}
+            key={key}
         >
             <Image
                 src={company.brand}
@@ -33,7 +34,7 @@ export default function Companies() {
         <div>
             <h1>Companies</h1>
             <div className={styles.companies_list}>
-            { companies.map((company) => <CompanyListItem company={company} />) }
+            { companies.map((company, index) => <CompanyListItem company={company} key={index} />) }
             </div>
         </div>
     )
