@@ -6,11 +6,11 @@ import Link from 'next/link'
 import Card from "../../../components/card";
 
 import styles from './companies_card.module.css'
-import { getAllCompanies, getFeaturedCompanies } from '@/app/api/job-api';
+import { getFeaturedCompanies } from '@/app/api/job-api';
 
-function CompanyListItem({ company }) {
+function CompanyListItem({ company, key }) {
     return (
-        <li key={company.name} className={styles.list_item}>
+        <li key={key} className={styles.list_item}>
             <Link href={{
                 pathname: '/search',
                 query: { company: company.name }
@@ -37,9 +37,9 @@ export default function CompaniesCard() {
             <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed.</p>
             <ul className={styles.items}>
                 {
-                    companies.map((company) => (
-                        <CompanyListItem company={company} />
-                    ))
+                    companies.map((company, index) => {
+                        return <CompanyListItem company={company} key={index} />
+                    })
                 }
             </ul>
         </Card>

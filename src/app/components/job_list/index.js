@@ -5,9 +5,11 @@ import Link from 'next/link'
 
 import styles from './job_list.module.css'
 
-function JobListItem({ job, slug }) {
+function JobListItem({ job, slug, key }) {
     const frontmatter = job.frontmatter
     const isFeatured = frontmatter.isFeatured
+
+    console.log(key)
 
     return (
         <Link
@@ -15,7 +17,7 @@ function JobListItem({ job, slug }) {
             prefetch={isFeatured}
             className={`${styles.job_list_item} ${isFeatured ? styles.featured : ''}`}
         >
-            <div key={slug} className={styles.company_wrapper}>
+            <div key={key} className={styles.company_wrapper}>
                 <Image
                     src={frontmatter.brand}
                     className={styles.brand}
@@ -46,7 +48,10 @@ function JobListItem({ job, slug }) {
 }
 
 export default function JobList({ jobs, title }) {
-    const jobListItems = jobs?.map((job) => <JobListItem job={job} slug={job.slug} />)
+    const jobListItems = jobs?.map((job, index) => {
+        console.log(index)
+        return <JobListItem job={job} slug={job.slug} key={index} />
+    })
 
     return (
         <section className={styles.container}>
