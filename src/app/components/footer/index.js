@@ -24,7 +24,7 @@ export default function Footer({ languages, levels }) {
                         <ul>
                             {
                                 languages?.map((language) => (
-                                    <li>
+                                    <li key={language.queryString}>
                                         <Link href={{
                                             pathname: '/search',
                                             query: { language: language.queryString }
@@ -42,7 +42,7 @@ export default function Footer({ languages, levels }) {
                         <ul>
                             {
                                 levels?.map((level) => (
-                                    <li>
+                                    <li key={level.queryString}>
                                         <Link href={{
                                             pathname: '/search',
                                             query: { level: level.queryString }

@@ -4,7 +4,6 @@ import Image from 'next/image'
 import Link from 'next/link'
 
 import styles from './job_list.module.css'
-import { getAllFeatured, getAllLatest } from '@/app/api/job-api'
 
 function JobListItem({ job, slug }) {
     const frontmatter = job.frontmatter
@@ -16,7 +15,7 @@ function JobListItem({ job, slug }) {
             prefetch={isFeatured}
             className={`${styles.job_list_item} ${isFeatured ? styles.featured : ''}`}
         >
-            <div className={styles.company_wrapper}>
+            <div key={slug} className={styles.company_wrapper}>
                 <Image
                     src={frontmatter.brand}
                     className={styles.brand}
@@ -46,21 +45,14 @@ function JobListItem({ job, slug }) {
     )
 }
 
-export default function JobList() {
-    const allFeatured = getAllFeatured()
-    const allLatest = getAllLatest()
+export default function JobList({ jobs, title }) {
+    const jobListItems = jobs?.map((job) => <JobListItem job={job} slug={job.slug} />)
 
     return (
         <section className={styles.container}>
             <div className={styles.job_list}>
                 <div className={styles.job_list_items}>
-                    <h2>Featured jobs</h2>
-                    { allFeatured.map((job) => <JobListItem job={job} slug={job.slug} />) }
-                </div>
-
-                <div className={styles.job_list_items}>
-                    <h2>Latest jobs</h2>
-                    { allLatest.map((job) => <JobListItem job={job} slug={job.slug} />) }
+                    { jobListItems }
                 </div>
             </div>
         </section>

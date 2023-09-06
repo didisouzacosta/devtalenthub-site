@@ -10,7 +10,7 @@ import { getAllCompanies, getFeaturedCompanies } from '@/app/api/job-api';
 
 function CompanyListItem({ company }) {
     return (
-        <li className={styles.list_item}>
+        <li key={company.name} className={styles.list_item}>
             <Link href={{
                 pathname: '/search',
                 query: { company: company.name }
