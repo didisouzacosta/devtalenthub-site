@@ -7,7 +7,7 @@ export default function Search() {
 
     return (
         <div>
-            <h1>Search</h1>
+            <h1>Search results</h1>
             <JobList jobs={jobs} />
         </div>
     )

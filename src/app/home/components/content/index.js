@@ -1,7 +1,6 @@
 'user client'
 
 import JobList from '@/app/components/job_list'
-import Banner300x400 from '@/app/components/ads/300x400'
 import CompaniesCard from '../companies-card'
 import PageContent from '@/app/components/page_content'
 
@@ -21,7 +20,6 @@ export default function Content() {
                     <JobList jobs={latestJobs} title="Latest Jobs" />
                 </div>
                 <div className={styles.column}>
-                    <Banner300x400 />
                     <CompaniesCard />
                 </div>
             </div>
