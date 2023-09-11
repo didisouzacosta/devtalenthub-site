@@ -58,7 +58,7 @@ export default function Header({ levels, languages }) {
             <nav className={styles.nav}>
                 <Link href="/home" className={styles.brand}>
                     <Image
-                        src="/"
+                        src="/dev_talent_hub.png"
                         width={200}
                         height={50}
                         alt="DevTalentHub"
