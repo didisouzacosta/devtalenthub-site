@@ -5,7 +5,6 @@ import Link from 'next/link'
 import utilStyles from '@/app/util/styles/util.module.css'
 import styles from './header.module.css'
 import Card from '../card'
-import { getAllLanguages, getAllLevels } from '@/app/api/job-api'
 
 function CategoriesCard({ languages, levels }) {
     return (
@@ -59,7 +58,7 @@ export default function Header({ levels, languages }) {
             <nav className={styles.nav}>
                 <Link href="/home" className={styles.brand}>
                     <Image
-                        src="https://assets.website-files.com/60c77302fcfa2b84ab595f64/60da7a7b304772e2954fe9e4_job-board-x-logo-webflow-template-2.svg"
+                        src="/"
                         width={200}
                         height={50}
                         alt="DevTalentHub"

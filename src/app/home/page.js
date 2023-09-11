@@ -10,7 +10,7 @@ export default function Home() {
         <>
             <Banner />
             <SearchBar />
-            <Banner970x90 className={styles.banner_970x90}/>
+            {/* <Banner970x90 className={styles.banner_970x90}/> */}
             <Content />
         </>
     )
