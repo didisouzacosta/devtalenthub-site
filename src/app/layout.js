@@ -13,7 +13,7 @@ export default function RootLayout({ children }) {
   const levels = getAllLevels()
 
   return (
-    <html lang="en">
+    <html lang="pt-bt">
       <head>
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6518499187853251" crossorigin="anonymous"></script>
       </head>
