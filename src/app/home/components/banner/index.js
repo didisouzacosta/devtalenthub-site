@@ -7,8 +7,8 @@ export default function Banner() {
         <div className={styles.container}>
             <div className={styles.center}>
                 <span className={styles.span}>
-                    <h1 className={styles.title_header}>Job Board for Developers, Designers, and Marketers</h1>
-                    <p className={styles.title_description}>Jobs is a curated job board of the best jobs for developers, designers and marketers in the tech industry.</p>
+                    <h1 className={styles.title_header}>Made with focus in Mobile Developers</h1>
+                    <p className={styles.title_description}>Dev talent hub is a curated job board of the best jobs for mobile developers.</p>
                 </span>
             </div>
         </div>
