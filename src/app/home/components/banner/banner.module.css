@@ -1,13 +1,12 @@
 .container {
     display: flex;
     justify-content: center;
-    background-color: #f2f4ff;
+    background-color: #f8f8f8;
     padding: var(--padding);
 }
 
 .center {
     text-align: center;
-    max-width: 540px;
     width: var(--max-width);
 }
 
@@ -20,11 +19,17 @@
 }
 
 .title_header {
-    font-size: 3rem;
+    font-size: 4rem;
 }
 
 .title_description {
     margin-top: 16px;
     font-size: 1.2rem;
     font-weight: 200;
+}
+
+@media (max-width: 600px) {
+    .title_header {
+        font-size: 3rem;
+    }
 }
