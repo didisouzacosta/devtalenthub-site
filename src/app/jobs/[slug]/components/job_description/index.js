@@ -24,14 +24,29 @@ export default function JobDescription({ params: { frontmatter, content } }) {
                         />
                     </div>
                     <div className={styles.infos}>
-                        anything
+                        <div className={styles.column_wrapper}>
+                            <p>Location</p>
+                            <strong>{frontmatter.location}</strong>
+                        </div>
+                        <div className={styles.column_wrapper}>
+                            <p>Level</p>
+                            <strong>{frontmatter.levels?.join(" / ")}</strong>
+                        </div>
+                        <div className={styles.column_wrapper}>
+                            <p>Language</p>
+                            <strong>{frontmatter.languages?.join(" / ")}</strong>
+                        </div>
+                        <div className={styles.column_wrapper}>
+                            <p>Salary</p>
+                            <strong>{frontmatter.salary ?? '---'}</strong>
+                        </div>
                     </div>
                 </div>
                 <div>
-                <h2>Job description</h2>
-                <div className={styles.description} dangerouslySetInnerHTML={{ __html: md().render(content) }} />
+                    <h2>Job description</h2>
+                    <div className={styles.description} dangerouslySetInnerHTML={{ __html: md().render(content) }} />
                 </div>
-                <Link href={ frontmatter.apply_url } target="_blank" prefetch={false} className={utilStyles.button_primary}>
+                <Link href={frontmatter.apply_url} target="_blank" prefetch={false} className={utilStyles.button_primary}>
                     Apply now
                 </Link>
             </article>

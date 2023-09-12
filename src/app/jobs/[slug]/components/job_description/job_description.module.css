@@ -24,10 +24,21 @@
     margin-left: 16px;
 }
 
-.infos {
+.header .infos {
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    justify-items: flex-start;
     border-top: 1px solid #e0e0ea;
     border-bottom: 1px solid #e0e0ea;
     padding: 28px 0;
+}
+
+.header .infos .column_wrapper {
+    color: #0F0F0F;
+}
+
+.header .infos .column_wrapper p {
+    margin-bottom: 8px;
 }
 
 .description {
