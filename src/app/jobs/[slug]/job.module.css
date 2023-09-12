@@ -17,8 +17,8 @@
     row-gap: 16px;
 }
 
-@media (max-width: 600px) {
+@media (max-width: 1000px) {
     .grid {
-        grid-template-columns: auto;
+        grid-template-columns: 1fr;
     }
 }

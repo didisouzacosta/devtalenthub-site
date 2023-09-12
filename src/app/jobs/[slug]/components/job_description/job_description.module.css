@@ -26,7 +26,7 @@
 
 .header .infos {
     display: grid;
-    grid-template-columns: repeat(4, auto);
+    grid-template-columns: repeat(4, 1fr);
     justify-items: flex-start;
     border-top: 1px solid #e0e0ea;
     border-bottom: 1px solid #e0e0ea;
@@ -52,4 +52,11 @@
 .description h5,
 .description h6 {
   margin-top: 2rem;
+}
+
+@media (max-width: 600px) {
+    .header .infos {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 16px;
+    }
 }

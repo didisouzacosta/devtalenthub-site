@@ -1,6 +1,6 @@
 .companies_list {
     display: grid;
-    grid-template-columns: repeat(4, auto);
+    grid-template-columns: repeat(4, 1fr);
     gap: 16px;
     margin-top: 32px;
 }
@@ -29,6 +29,6 @@
 
 @media (max-width: 1000px) {
     .companies_list {
-        grid-template-columns: repeat(2, auto);
+        grid-template-columns: repeat(2, 1fr);
     }
 }
