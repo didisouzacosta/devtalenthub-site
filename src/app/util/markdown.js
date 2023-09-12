@@ -11,9 +11,10 @@ export const getFile = (filename, folder) => {
     const folderPath = getPath(folder)
     const filePath = `${folderPath}/${slug}.md`
     const readFile = fs.readFileSync(filePath, 'utf-8')
+    const { birthtime } = fs.statSync(filePath)
     const { data: frontmatter, content } = matter(readFile)
     
-    return { slug, frontmatter, content }
+    return { slug, frontmatter, content, birthtime }
 };
 
 export const getFiles = (folder) => {

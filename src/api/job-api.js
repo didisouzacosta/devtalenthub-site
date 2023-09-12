@@ -4,7 +4,7 @@ const folder = 'markdown/jobs'
 
 export const get = (slug) => getFile(slug, folder)
 export const getAll = () => getFiles(folder)
-export const getAllPublished = () => getAll().filter((job) => job.frontmatter.isPublished === true)
+export const getAllPublished = () => getAll().filter((job) => job.frontmatter.isPublished === true).sort((current, next) => next.birthtime - current.birthtime)
 export const getAllFeatured = () => getAllPublished().filter((job) => job.frontmatter.isFeatured == true)
 export const getAllLatest = () => getAllPublished().filter((job) => job.frontmatter.isFeatured !== true)
 

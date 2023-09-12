@@ -2,7 +2,7 @@ import JobList from '@/app/components/job_list'
 import CompaniesCard from '../companies-card'
 import PageContent from '@/app/components/page_content'
 
-import { getAllFeatured, getAllLatest } from '@/app/api/job-api'
+import { getAllFeatured, getAllLatest } from '@/api/job-api'
 
 import styles from './content.module.css'
 

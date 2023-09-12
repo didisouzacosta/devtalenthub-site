@@ -1,4 +1,4 @@
-import { find, getAllPublished } from '@/app/api/job-api'
+import { find, getAllPublished } from '@/api/job-api'
 
 import JobList from '../components/job_list';
 
