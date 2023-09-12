@@ -22,7 +22,7 @@ export default function Job({ params: { slug } }) {
             <div className={styles.column}>
                 <Card>
                     <h3>Apply now</h3>
-                    <p>Please let Webflow know that you found this position on our job board, as that is a great way to support us, so we can keep posting cool jobs every day.</p>
+                    <p>Dont waste time. Apply yourself and pave the way for the success you deserve.</p>
                     <Link href={ vacancy.frontmatter.apply_url } target="_blank" prefetch={false} className={utilStyles.button_primary}>Apply now</Link>
                 </Card>
                 {/* <Banner300x400 /> */}
