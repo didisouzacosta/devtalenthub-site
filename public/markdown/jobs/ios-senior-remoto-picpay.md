@@ -1,5 +1,5 @@
 ---
-title: Desenvolvedor iOS Sr (Remoto)
+title: Desenvolvedor iOS Sênior/Pleno (Remoto)
 company: PicPay
 description: Customizing active links using useRouter()
 brand: https://media.licdn.com/dms/image/C560BAQHuoq0NSYVt-g/company-logo_100_100/0/1658520019041?e=1702512000&v=beta&t=hQfB67deKTbPdKiKREtMGbBNxvkQ0ph1_qmZftgd6U8
