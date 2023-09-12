@@ -19,13 +19,19 @@
 }
 
 .title_header {
-    font-size: 4rem;
+    font-size: 5rem;
 }
 
 .title_description {
     margin-top: 16px;
     font-size: 1.2rem;
     font-weight: 200;
+}
+
+@media (max-width: 1000px) {
+    .title_header {
+        font-size: 4rem;
+    }
 }
 
 @media (max-width: 600px) {
