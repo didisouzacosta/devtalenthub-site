@@ -11,7 +11,7 @@ levels:
   - Pleno
   - Senior
 isFeatured: false
-isPublished: true
+isPublished: false
 publishedDate: 2023/01/09
 tags:
   - next
