@@ -15,6 +15,14 @@ export default function JobDescription({ params: { frontmatter, content } }) {
             <article className={styles.content}>
                 <div className={styles.header}>
                     <div className={styles.title}>
+                        <Image
+                            src={frontmatter.brand}
+                            className={styles.brand_mobile}
+                            width={60}
+                            height={60}
+                            priority="lazy"
+                            alt={frontmatter.company}
+                        />
                         <h1>{frontmatter.title}</h1>
                         <Image
                             src={frontmatter.brand}
