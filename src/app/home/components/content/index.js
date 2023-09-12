@@ -1,5 +1,3 @@
-'user client'
-
 import JobList from '@/app/components/job_list'
 import CompaniesCard from '../companies-card'
 import PageContent from '@/app/components/page_content'
