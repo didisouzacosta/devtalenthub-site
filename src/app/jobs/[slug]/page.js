@@ -22,7 +22,7 @@ export default function Job({ params: { slug } }) {
             <div className={styles.column}>
                 <Card>
                     <h3>Apply now</h3>
-                    <p>Dont waste time. Apply yourself and pave the way for the success you deserve.</p>
+                    <p>Don`t waste time. Apply yourself and pave the way for the success you deserve.</p>
                     <Link href={ vacancy.frontmatter.apply_url } target="_blank" prefetch={false} className={utilStyles.button_primary}>Apply now</Link>
                 </Card>
                 {/* <Banner300x400 /> */}

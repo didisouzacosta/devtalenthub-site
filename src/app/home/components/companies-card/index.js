@@ -34,7 +34,7 @@ export default function CompaniesCard() {
     return (
         <Card>
             <h3>Features companies</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed.</p>
+            <p>The best companies for you work.</p>
             <ul className={styles.items}>
                 {
                     companies.map((company, index) => {
