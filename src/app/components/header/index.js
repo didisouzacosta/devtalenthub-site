@@ -66,7 +66,6 @@ export default function Header({ levels, languages }) {
                     />
                 </Link>
                 <ul role='list'>
-                    <li><Link href="/home">Home</Link></li>
                     <li><Link href='/companies'>Companies</Link></li>
                     <li className={styles.categories}>
                         <span>Categories</span>
