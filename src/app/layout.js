@@ -4,7 +4,7 @@ import { Analytics } from '@vercel/analytics/react';
 
 import Header from './components/header'
 import Footer from './components/footer'
-import { getAllLanguages, getAllLevels } from './api/job-api'
+import { getAllLanguages, getAllLevels } from '../api/job-api'
 
 const inter = Inter({ subsets: ['latin'] })
 

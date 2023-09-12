@@ -4,7 +4,7 @@ import Link from 'next/link'
 import Card from "../../../components/card";
 
 import styles from './companies_card.module.css'
-import { getFeaturedCompanies } from '@/app/api/job-api';
+import { getFeaturedCompanies } from '@/api/job-api';
 
 function CompanyListItem({ company, key }) {
     return (

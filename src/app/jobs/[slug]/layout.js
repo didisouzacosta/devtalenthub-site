@@ -1,4 +1,4 @@
-import { get } from "@/app/api/job-api"
+import { get } from "@/api/job-api"
 import PageContent from "@/app/components/page_content"
 
 export async function generateMetadata({ params: { slug } }) {
