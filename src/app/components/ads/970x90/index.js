@@ -1,4 +1,4 @@
-'user client'
+'use client'
 
 import styles from './970x90.module.css'
 

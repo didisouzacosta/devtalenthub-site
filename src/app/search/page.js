@@ -1,9 +1,9 @@
-import JobList from "../components/job_list";
+import { find, getAllPublished } from '@/app/api/job-api'
 
-import { getAllPublished } from '@/app/api/job-api'
+import JobList from '../components/job_list';
 
-export default function Search() {
-    const jobs = getAllPublished()
+export default function Search({ searchParams }) {
+    const jobs = find({ searchParams })
 
     return (
         <div>

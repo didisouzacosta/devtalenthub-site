@@ -54,6 +54,15 @@ export const getAllCompanies = () => {
 
 export const getFeaturedCompanies = (limit = 7) => getAllCompanies().splice(0, limit)
 
-export const find = () => {
-    return []
+export const find = ({ searchParams }) => {
+    return getAllPublished()
+    .filter((job) => {
+        const frontmatter = job.frontmatter
+        const containsCompany = frontmatter?.company?.toLowerCase() == searchParams.company?.toLowerCase() ?? false
+        const containsLanguage = frontmatter?.languages?.map((language) => language.toLowerCase()).includes(searchParams.language) ?? false
+        const containsLevel = frontmatter?.levels?.map((level) => level.toLowerCase()).includes(searchParams.level) ?? false
+        const contains = containsCompany || containsLanguage || containsLevel
+
+        return contains ? job : null
+    })
 }
