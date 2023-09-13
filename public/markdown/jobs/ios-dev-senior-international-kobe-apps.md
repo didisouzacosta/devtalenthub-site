@@ -9,7 +9,6 @@ languages:
   - Swift
 levels: 
   - Senior
-isFeatured: true
 isPublished: true
 publishedDate: 2023/01/09
 tags:
