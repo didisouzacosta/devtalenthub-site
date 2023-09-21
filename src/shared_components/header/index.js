@@ -9,14 +9,14 @@ import styles from './header.module.css'
 import Card from '../card'
 
 function CategoriesCard({ languages, levels }) {
-    const t = useTranslations('title');
+    const t = useTranslations();
 
     return (
         <div className={styles.categories_card}>
             <Card>
                 <div className={styles.columns}>
                     <div>
-                        <h3>{t('languages')}</h3>
+                        <h3>{t('title.languages')}</h3>
                         <ul>
                             {
                                 languages?.map((language) => (
@@ -34,7 +34,7 @@ function CategoriesCard({ languages, levels }) {
                     </div>
 
                     <div>
-                        <h3>{t('level')}</h3>
+                        <h3>{t('title.level')}</h3>
                         <ul>
                             {
                                 levels?.map((level) => (
@@ -43,7 +43,7 @@ function CategoriesCard({ languages, levels }) {
                                             pathname: '/search',
                                             query: { level: level.queryString }
                                         }}>
-                                            {level.value}
+                                            {t(`job.level-type.${level.queryString}`)}
                                         </Link>
                                     </li>
                                 ))

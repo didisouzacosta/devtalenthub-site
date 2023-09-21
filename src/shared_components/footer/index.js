@@ -50,7 +50,7 @@ export default function Footer({ languages, levels }) {
                                             pathname: '/search',
                                             query: { level: level.queryString }
                                         }}>
-                                            {level.value}
+                                            {t(`job.level-type.${level.queryString}`)}
                                         </Link>
                                     </li>
                                 ))

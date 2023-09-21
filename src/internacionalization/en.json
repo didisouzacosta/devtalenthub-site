@@ -30,7 +30,12 @@
         "level": "Level",
         "language": "Language",
         "salary": "Salary",
-        "description": "Job description"
+        "description": "Job description",
+        "level-type": {
+            "junior": "Junior",
+            "pleno": "Pleno",
+            "senior": "Senior"
+        }
     },
     "footer": {
         "message": "Made with ❤️ using"
@@ -38,5 +43,9 @@
     "apply": {
         "title": "Apply now",
         "message": "Don`t waste time. Apply yourself and pave the way for the success you deserve."
+    },
+    "featured_companies": {
+        "title": "Featured companies",
+        "message": "The best companies for you work."
     }
 }

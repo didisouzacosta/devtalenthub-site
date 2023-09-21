@@ -19,7 +19,6 @@
     "title": {
         "featured_jobs": "Oportunidades em destaques",
         "latest_jobs": "Últimas oportunidades",
-        "featured_companies": "Empresas em destaque",
         "pages": "Páginas",
         "languages": "Linguagens",
         "level": "Nível",
@@ -30,7 +29,12 @@
         "level": "Nível",
         "language": "Linguagem",
         "salary": "Salário",
-        "description": "Descricação da vaga"
+        "description": "Descricação da vaga",
+        "level-type": {
+            "junior": "Júnior",
+            "pleno": "Pleno",
+            "senior": "Sênior"
+        }
     },
     "footer": {
         "message": "Feito com ❤️ usando"
@@ -38,5 +42,10 @@
     "apply": {
         "title": "Aplique agora",
         "message": "Não perca tempo. Aplique agora e tome o caminho do sucesso que você merece."
+    },
+    "featured_companies": {
+        "title": "Empresas em destaque",
+        "message": "As melhores empresas para você trabalhar."
     }
+    
 }

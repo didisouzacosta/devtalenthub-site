@@ -33,8 +33,8 @@ export default function CompaniesCard({ companies }) {
 
     return (
         <Card>
-            <h3>{t('title.featured_companies')}</h3>
-            <p>The best companies for you work.</p>
+            <h3>{t('featured_companies.title')}</h3>
+            <p>{t('featured_companies.message')}</p>
             <ul className={styles.items}>
                 {
                     companies?.map((company, index) => {

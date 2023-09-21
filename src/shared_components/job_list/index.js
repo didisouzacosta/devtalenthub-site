@@ -37,7 +37,7 @@ function JobListItem({ job, slug, key }) {
             </div>
             <div className={styles.column_wrapper}>
                 <p className={styles.title}>{t('level')}</p>
-                <strong>{frontmatter.levels?.join(" / ")}</strong>
+                <strong>{frontmatter.levels?.map((level) => t(`level-type.${level.toLowerCase()}`)).join(" / ")}</strong>
             </div>
             <div className={styles.column_wrapper}>
                 <p className={styles.title}>{t('language')}</p>
