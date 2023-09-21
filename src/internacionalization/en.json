@@ -20,6 +20,13 @@
         "pages": "Pages",
         "languages": "Languages",
         "level": "Level",
-        "legal": "Legal"
+        "legal": "Legal",
+        "job_description": "Job description"
+    },
+    "label": {
+        "location": "Location",
+        "level": "Level",
+        "language": "Language",
+        "salary": "Salary"
     }
 }

@@ -3,6 +3,7 @@
 import Link from 'next/link'
 import Image from 'next/image'
 import md from 'markdown-it';
+import { useTranslations } from 'next-intl';
 
 import Card from "@/shared_components/card";
 
@@ -10,6 +11,8 @@ import utilStyles from '@/util/styles/util.module.css'
 import styles from './job_description.module.css'
 
 export default function JobDescription({ params: { frontmatter, content } }) {
+    const t = useTranslations()
+
     return (
         <Card>
             <article className={styles.content}>
@@ -35,25 +38,25 @@ export default function JobDescription({ params: { frontmatter, content } }) {
                     </div>
                     <div className={styles.infos}>
                         <div className={styles.column_wrapper}>
-                            <p>Location</p>
+                            <p>{t('label.location')}</p>
                             <strong>{frontmatter.location}</strong>
                         </div>
                         <div className={styles.column_wrapper}>
-                            <p>Level</p>
+                            <p>{t('label.level')}</p>
                             <strong>{frontmatter.levels?.join(" / ")}</strong>
                         </div>
                         <div className={styles.column_wrapper}>
-                            <p>Language</p>
+                            <p>{t('label.language')}</p>
                             <strong>{frontmatter.languages?.join(" / ")}</strong>
                         </div>
                         <div className={styles.column_wrapper}>
-                            <p>Salary</p>
+                            <p>{t('label.salary')}</p>
                             <strong>{frontmatter.salary ?? '---'}</strong>
                         </div>
                     </div>
                 </div>
                 <div>
-                    <h2>Job description</h2>
+                    <h2>{t('title.job_description')}</h2>
                     <div className={styles.description} dangerouslySetInnerHTML={{ __html: md().render(content) }} />
                 </div>
                 <Link href={frontmatter.apply_url} target="_blank" prefetch={false} className={utilStyles.button_primary}>

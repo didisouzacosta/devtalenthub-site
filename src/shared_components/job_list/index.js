@@ -7,6 +7,7 @@ import { useTranslations } from 'next-intl';
 import styles from './job_list.module.css'
 
 function JobListItem({ job, slug, key }) {
+    const t = useTranslations()
     const frontmatter = job.frontmatter
     const isFeatured = frontmatter.isFeatured
 
@@ -31,15 +32,15 @@ function JobListItem({ job, slug, key }) {
                 </div>
             </div>
             <div className={styles.column_wrapper}>
-                <p className={styles.title}>Location</p>
+                <p className={styles.title}>{t('label.location')}</p>
                 <strong>{frontmatter.location}</strong>
             </div>
             <div className={styles.column_wrapper}>
-                <p className={styles.title}>Level</p>
+                <p className={styles.title}>{t('label.level')}</p>
                 <strong>{frontmatter.levels?.join(" / ")}</strong>
             </div>
             <div className={styles.column_wrapper}>
-                <p className={styles.title}>Language</p>
+                <p className={styles.title}>{t('label.language')}</p>
                 <strong>{frontmatter.languages?.join(" / ")}</strong>
             </div>
         </Link>
