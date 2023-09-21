@@ -11,7 +11,8 @@ export default function Banner() {
         <div className={styles.container}>
             <div className={styles.center}>
                 <span className={styles.span}>
-                    <h1 className={styles.title_header}>{translations('title')}</h1>
+                    {/* <h1 className={styles.title_header}>{translations('title')}</h1> */}
+                    <h1 className={styles.title_header} dangerouslySetInnerHTML={{__html: translations('title')}} />
                     <p className={styles.title_description}>{translations('subtitle')}</p>
                 </span>
             </div>
