@@ -1,10 +1,12 @@
+'use client'
+
 import Image from 'next/image'
 import Link from 'next/link'
+import { useTranslations } from 'next-intl';
 
 import Card from "../../../../../shared_components/card";
 
 import styles from './companies_card.module.css'
-import { getFeaturedCompanies } from '@/api/job-api';
 
 function CompanyListItem({ company, key }) {
     return (
@@ -26,16 +28,16 @@ function CompanyListItem({ company, key }) {
     )
 }
 
-export default function CompaniesCard() {
-    const companies = getFeaturedCompanies()
+export default function CompaniesCard({ companies }) {
+    const t = useTranslations()
 
     return (
         <Card>
-            <h3>Features companies</h3>
+            <h3>{t('title.featured_companies')}</h3>
             <p>The best companies for you work.</p>
             <ul className={styles.items}>
                 {
-                    companies.map((company, index) => {
+                    companies?.map((company, index) => {
                         return <CompanyListItem company={company} key={index} />
                     })
                 }

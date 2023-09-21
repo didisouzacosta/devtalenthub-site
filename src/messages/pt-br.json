@@ -2,5 +2,24 @@
     "banner": {
         "title": "Feito com foco em <br/> desenvolvedores mobile",
         "subtitle": "Dev Talent Hub traz as melhores oportunidades para desenvolvedores mobile."
+    },
+    "menu": {
+        "home": "Home",
+        "about_us": "Sobre nós",
+        "companies": "Empresas",
+        "categories": "Categorias",
+        "contact": "Contato",
+        "post_a_job": "Publique uma vaga",
+        "privacy_policy": "Politíca de privacidade",
+        "cookie_preferences": "Preferência de cookies"
+    },
+    "title": {
+        "featured_jobs": "Oportunidades em destaques",
+        "latest_jobs": "Últimas oportunidades",
+        "featured_companies": "Empresas em destaque",
+        "pages": "Páginas",
+        "languages": "Linguagens",
+        "level": "Nível",
+        "legal": "Legal"
     }
 }

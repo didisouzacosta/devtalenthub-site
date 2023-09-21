@@ -1,26 +1,29 @@
 'use client'
 
 import Link from 'next/link'
+import { useTranslations } from 'next-intl';
 
 import styles from './footer.module.css'
 
 export default function Footer({ languages, levels }) {
+    const t = useTranslations();
+    
     return (
         <footer className={styles.center}>
             <div className={styles.footer}>
                 <nav>
                     <div className={styles.column_wrapper}>
-                        <h3>Pages</h3>
+                        <h3>{t('title.pages')}</h3>
                         <ul>
-                            <li><Link href='/home'>Home</Link></li>
-                            <li><Link href='/about-us'>About us</Link></li>
-                            <li><Link href='/companies'>Companies</Link></li>
-                            <li><Link href='/contact'>Contact</Link></li>
+                            <li><Link href='/home'>{t('menu.home')}</Link></li>
+                            <li><Link href='/about-us'>{t('menu.about_us')}</Link></li>
+                            <li><Link href='/companies'>{t('menu.companies')}</Link></li>
+                            <li><Link href='/contact'>{t('menu.contact')}</Link></li>
                         </ul>
                     </div>
 
                     <div className={styles.column_wrapper}>
-                        <h3>Languages</h3>
+                        <h3>{t('title.languages')}</h3>
                         <ul>
                             {
                                 languages?.map((language) => (
@@ -38,7 +41,7 @@ export default function Footer({ languages, levels }) {
                     </div>
 
                     <div className={styles.column_wrapper}>
-                        <h3>Level</h3>
+                        <h3>{t('title.level')}</h3>
                         <ul>
                             {
                                 levels?.map((level) => (
@@ -56,10 +59,10 @@ export default function Footer({ languages, levels }) {
                     </div>
 
                     <div className={styles.column_wrapper}>
-                        <h3>Legal</h3>
+                        <h3>{t('title.legal')}</h3>
                         <ul>
-                            <li><Link href='/privacy-policy'>Privacy Policy</Link></li>
-                            <li><Link href='/cookie-preferences'>Cookie Preferences</Link></li>
+                            <li><Link href='/privacy-policy'>{t('menu.privacy_policy')}</Link></li>
+                            <li><Link href='/cookie-preferences'>{t('menu.cookie_preferences')}</Link></li>
                         </ul>
                     </div>
                 </nav>
