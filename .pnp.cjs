@@ -34,6 +34,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["gray-matter", "npm:4.0.3"],\
             ["markdown-it", "npm:13.0.1"],\
             ["next", "virtual:8066805f78f26d6420f2b0852277c1ba6e065d01f343d896861e7da7537e9ca5cf9ca1269a7fb51c8dd8675d9a57f8dc111421d300a53f88ca90e2f6e2bd9f94#npm:13.4.17"],\
+            ["next-intl", "virtual:8066805f78f26d6420f2b0852277c1ba6e065d01f343d896861e7da7537e9ca5cf9ca1269a7fb51c8dd8675d9a57f8dc111421d300a53f88ca90e2f6e2bd9f94#npm:2.20.0"],\
             ["react", "npm:18.2.0"],\
             ["react-dom", "virtual:8066805f78f26d6420f2b0852277c1ba6e065d01f343d896861e7da7537e9ca5cf9ca1269a7fb51c8dd8675d9a57f8dc111421d300a53f88ca90e2f6e2bd9f94#npm:18.2.0"]\
           ],\
@@ -114,6 +115,85 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageLocation": "./.yarn/cache/@eslint-js-npm-8.47.0-ecde461ef4-0ef57fe27b.zip/node_modules/@eslint/js/",\
           "packageDependencies": [\
             ["@eslint/js", "npm:8.47.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@formatjs/ecma402-abstract", [\
+        ["npm:1.11.4", {\
+          "packageLocation": "./.yarn/cache/@formatjs-ecma402-abstract-npm-1.11.4-98baf4d2cc-05dbe1c645.zip/node_modules/@formatjs/ecma402-abstract/",\
+          "packageDependencies": [\
+            ["@formatjs/ecma402-abstract", "npm:1.11.4"],\
+            ["@formatjs/intl-localematcher", "npm:0.2.25"],\
+            ["tslib", "npm:2.6.2"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["npm:1.17.2", {\
+          "packageLocation": "./.yarn/cache/@formatjs-ecma402-abstract-npm-1.17.2-55bbb7bd5f-026382b1fb.zip/node_modules/@formatjs/ecma402-abstract/",\
+          "packageDependencies": [\
+            ["@formatjs/ecma402-abstract", "npm:1.17.2"],\
+            ["@formatjs/intl-localematcher", "npm:0.4.2"],\
+            ["tslib", "npm:2.6.1"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@formatjs/fast-memoize", [\
+        ["npm:1.2.1", {\
+          "packageLocation": "./.yarn/cache/@formatjs-fast-memoize-npm-1.2.1-e1ac6697b8-7df9e94114.zip/node_modules/@formatjs/fast-memoize/",\
+          "packageDependencies": [\
+            ["@formatjs/fast-memoize", "npm:1.2.1"],\
+            ["tslib", "npm:2.6.2"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@formatjs/icu-messageformat-parser", [\
+        ["npm:2.1.0", {\
+          "packageLocation": "./.yarn/cache/@formatjs-icu-messageformat-parser-npm-2.1.0-2edfa20736-8dab4d102b.zip/node_modules/@formatjs/icu-messageformat-parser/",\
+          "packageDependencies": [\
+            ["@formatjs/icu-messageformat-parser", "npm:2.1.0"],\
+            ["@formatjs/ecma402-abstract", "npm:1.11.4"],\
+            ["@formatjs/icu-skeleton-parser", "npm:1.3.6"],\
+            ["tslib", "npm:2.6.2"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@formatjs/icu-skeleton-parser", [\
+        ["npm:1.3.6", {\
+          "packageLocation": "./.yarn/cache/@formatjs-icu-skeleton-parser-npm-1.3.6-d4a8303901-cce2d8bea5.zip/node_modules/@formatjs/icu-skeleton-parser/",\
+          "packageDependencies": [\
+            ["@formatjs/icu-skeleton-parser", "npm:1.3.6"],\
+            ["@formatjs/ecma402-abstract", "npm:1.11.4"],\
+            ["tslib", "npm:2.6.2"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["@formatjs/intl-localematcher", [\
+        ["npm:0.2.25", {\
+          "packageLocation": "./.yarn/cache/@formatjs-intl-localematcher-npm-0.2.25-6e304157f3-ee00ddc233.zip/node_modules/@formatjs/intl-localematcher/",\
+          "packageDependencies": [\
+            ["@formatjs/intl-localematcher", "npm:0.2.25"],\
+            ["tslib", "npm:2.6.2"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["npm:0.2.32", {\
+          "packageLocation": "./.yarn/cache/@formatjs-intl-localematcher-npm-0.2.32-1117c79148-477e18aaba.zip/node_modules/@formatjs/intl-localematcher/",\
+          "packageDependencies": [\
+            ["@formatjs/intl-localematcher", "npm:0.2.32"],\
+            ["tslib", "npm:2.6.1"]\
+          ],\
+          "linkType": "HARD"\
+        }],\
+        ["npm:0.4.2", {\
+          "packageLocation": "./.yarn/cache/@formatjs-intl-localematcher-npm-0.4.2-18c9cd92d8-df579d8c45.zip/node_modules/@formatjs/intl-localematcher/",\
+          "packageDependencies": [\
+            ["@formatjs/intl-localematcher", "npm:0.4.2"],\
+            ["tslib", "npm:2.6.1"]\
           ],\
           "linkType": "HARD"\
         }]\
@@ -1899,6 +1979,19 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["intl-messageformat", [\
+        ["npm:9.13.0", {\
+          "packageLocation": "./.yarn/cache/intl-messageformat-npm-9.13.0-7b380a28e9-effb840ae6.zip/node_modules/intl-messageformat/",\
+          "packageDependencies": [\
+            ["intl-messageformat", "npm:9.13.0"],\
+            ["@formatjs/ecma402-abstract", "npm:1.11.4"],\
+            ["@formatjs/fast-memoize", "npm:1.2.1"],\
+            ["@formatjs/icu-messageformat-parser", "npm:2.1.0"],\
+            ["tslib", "npm:2.6.2"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["is-array-buffer", [\
         ["npm:3.0.2", {\
           "packageLocation": "./.yarn/cache/is-array-buffer-npm-3.0.2-0dec897785-dcac9dda66.zip/node_modules/is-array-buffer/",\
@@ -2440,6 +2533,15 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "linkType": "HARD"\
         }]\
       ]],\
+      ["negotiator", [\
+        ["npm:0.6.3", {\
+          "packageLocation": "./.yarn/cache/negotiator-npm-0.6.3-9d50e36171-b8ffeb1e26.zip/node_modules/negotiator/",\
+          "packageDependencies": [\
+            ["negotiator", "npm:0.6.3"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
       ["next", [\
         ["npm:13.4.17", {\
           "packageLocation": "./.yarn/cache/next-npm-13.4.17-92e2bd41f4-57768bc8e0.zip/node_modules/next/",\
@@ -2487,6 +2589,35 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             "react-dom",\
             "react",\
             "sass"\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["next-intl", [\
+        ["npm:2.20.0", {\
+          "packageLocation": "./.yarn/cache/next-intl-npm-2.20.0-4c8b275324-c031c68a45.zip/node_modules/next-intl/",\
+          "packageDependencies": [\
+            ["next-intl", "npm:2.20.0"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:8066805f78f26d6420f2b0852277c1ba6e065d01f343d896861e7da7537e9ca5cf9ca1269a7fb51c8dd8675d9a57f8dc111421d300a53f88ca90e2f6e2bd9f94#npm:2.20.0", {\
+          "packageLocation": "./.yarn/__virtual__/next-intl-virtual-4a020ea1b0/0/cache/next-intl-npm-2.20.0-4c8b275324-c031c68a45.zip/node_modules/next-intl/",\
+          "packageDependencies": [\
+            ["next-intl", "virtual:8066805f78f26d6420f2b0852277c1ba6e065d01f343d896861e7da7537e9ca5cf9ca1269a7fb51c8dd8675d9a57f8dc111421d300a53f88ca90e2f6e2bd9f94#npm:2.20.0"],\
+            ["@formatjs/intl-localematcher", "npm:0.2.32"],\
+            ["@types/next", null],\
+            ["@types/react", null],\
+            ["negotiator", "npm:0.6.3"],\
+            ["next", "virtual:8066805f78f26d6420f2b0852277c1ba6e065d01f343d896861e7da7537e9ca5cf9ca1269a7fb51c8dd8675d9a57f8dc111421d300a53f88ca90e2f6e2bd9f94#npm:13.4.17"],\
+            ["react", "npm:18.2.0"],\
+            ["use-intl", "virtual:4a020ea1b0ea8cf4a3710001e7ca67252d3c5f1d6c993e5a0d1a446903316f0d34a931c9f68d255d96f912a3e3e520683988794485daae67a7902b91c0c10add#npm:2.20.0"]\
+          ],\
+          "packagePeers": [\
+            "@types/next",\
+            "@types/react",\
+            "next",\
+            "react"\
           ],\
           "linkType": "HARD"\
         }]\
@@ -3013,6 +3144,7 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["gray-matter", "npm:4.0.3"],\
             ["markdown-it", "npm:13.0.1"],\
             ["next", "virtual:8066805f78f26d6420f2b0852277c1ba6e065d01f343d896861e7da7537e9ca5cf9ca1269a7fb51c8dd8675d9a57f8dc111421d300a53f88ca90e2f6e2bd9f94#npm:13.4.17"],\
+            ["next-intl", "virtual:8066805f78f26d6420f2b0852277c1ba6e065d01f343d896861e7da7537e9ca5cf9ca1269a7fb51c8dd8675d9a57f8dc111421d300a53f88ca90e2f6e2bd9f94#npm:2.20.0"],\
             ["react", "npm:18.2.0"],\
             ["react-dom", "virtual:8066805f78f26d6420f2b0852277c1ba6e065d01f343d896861e7da7537e9ca5cf9ca1269a7fb51c8dd8675d9a57f8dc111421d300a53f88ca90e2f6e2bd9f94#npm:18.2.0"]\
           ],\
@@ -3265,6 +3397,13 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
             ["tslib", "npm:2.6.1"]\
           ],\
           "linkType": "HARD"\
+        }],\
+        ["npm:2.6.2", {\
+          "packageLocation": "./.yarn/cache/tslib-npm-2.6.2-4fc8c068d9-329ea56123.zip/node_modules/tslib/",\
+          "packageDependencies": [\
+            ["tslib", "npm:2.6.2"]\
+          ],\
+          "linkType": "HARD"\
         }]\
       ]],\
       ["type-check", [\
@@ -3365,6 +3504,30 @@ function $$SETUP_STATE(hydrateRuntimeState, basePath) {
           "packageDependencies": [\
             ["uri-js", "npm:4.4.1"],\
             ["punycode", "npm:2.3.0"]\
+          ],\
+          "linkType": "HARD"\
+        }]\
+      ]],\
+      ["use-intl", [\
+        ["npm:2.20.0", {\
+          "packageLocation": "./.yarn/cache/use-intl-npm-2.20.0-229b67f4b3-5a40af3691.zip/node_modules/use-intl/",\
+          "packageDependencies": [\
+            ["use-intl", "npm:2.20.0"]\
+          ],\
+          "linkType": "SOFT"\
+        }],\
+        ["virtual:4a020ea1b0ea8cf4a3710001e7ca67252d3c5f1d6c993e5a0d1a446903316f0d34a931c9f68d255d96f912a3e3e520683988794485daae67a7902b91c0c10add#npm:2.20.0", {\
+          "packageLocation": "./.yarn/__virtual__/use-intl-virtual-57979631dd/0/cache/use-intl-npm-2.20.0-229b67f4b3-5a40af3691.zip/node_modules/use-intl/",\
+          "packageDependencies": [\
+            ["use-intl", "virtual:4a020ea1b0ea8cf4a3710001e7ca67252d3c5f1d6c993e5a0d1a446903316f0d34a931c9f68d255d96f912a3e3e520683988794485daae67a7902b91c0c10add#npm:2.20.0"],\
+            ["@formatjs/ecma402-abstract", "npm:1.17.2"],\
+            ["@types/react", null],\
+            ["intl-messageformat", "npm:9.13.0"],\
+            ["react", "npm:18.2.0"]\
+          ],\
+          "packagePeers": [\
+            "@types/react",\
+            "react"\
           ],\
           "linkType": "HARD"\
         }]\

@@ -1,0 +1,25 @@
+{
+    "banner": {
+        "title": "Made with focus in <br/> Mobile Developers",
+        "subtitle": "Dev talent hub brings the best opportunities for mobile developers."
+    },
+    "menu": {
+        "home": "Home",
+        "about_us": "About us",
+        "companies": "Companies",
+        "categories": "Categories",
+        "contact": "Contact",
+        "post_a_job": "Post a job",
+        "privacy_policy": "Privacy policy",
+        "cookie_preferences": "Cookie preferences"
+    },
+    "title": {
+        "featured_jobs": "Featured jobs",
+        "latest_jobs": "Latest Jobs",
+        "featured_companies": "Featured Companies",
+        "pages": "Pages",
+        "languages": "Languages",
+        "level": "Level",
+        "legal": "Legal"
+    }
+}
