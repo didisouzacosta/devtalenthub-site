@@ -3,7 +3,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-import utilStyles from '@/app/util/styles/util.module.css'
+import utilStyles from '@/util/styles/util.module.css'
 import styles from './header.module.css'
 import Card from '../card'
 

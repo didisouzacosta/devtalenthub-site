@@ -6,7 +6,7 @@ import Card from '@/app/components/card'
 import MoreJobs from './components/more_jobs'
 import JobDescription from './components/job_description'
 
-import utilStyles from '@/app/util/styles/util.module.css'
+import utilStyles from '@/util/styles/util.module.css'
 import styles from './job.module.css'
 import Banner300x400 from '@/app/components/ads/300x400'
 

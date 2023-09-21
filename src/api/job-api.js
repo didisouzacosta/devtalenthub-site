@@ -1,4 +1,4 @@
-import { getFiles, getFile } from '@/app/util/markdown.js'
+import { getFiles, getFile } from '@/util/markdown.js'
 
 const folder = 'markdown/jobs'
 

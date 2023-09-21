@@ -6,7 +6,7 @@ import md from 'markdown-it';
 
 import Card from "@/app/components/card";
 
-import utilStyles from '@/app/util/styles/util.module.css'
+import utilStyles from '@/util/styles/util.module.css'
 import styles from './job_description.module.css'
 
 export default function JobDescription({ params: { frontmatter, content } }) {
