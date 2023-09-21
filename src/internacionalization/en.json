@@ -9,9 +9,12 @@
         "companies": "Companies",
         "categories": "Categories",
         "contact": "Contact",
-        "post_a_job": "Post a job",
         "privacy_policy": "Privacy policy",
         "cookie_preferences": "Cookie preferences"
+    },
+    "action": {
+        "post_a_job": "Post a job",
+        "apply_now": "Apply now"
     },
     "title": {
         "featured_jobs": "Featured jobs",
@@ -20,13 +23,20 @@
         "pages": "Pages",
         "languages": "Languages",
         "level": "Level",
-        "legal": "Legal",
-        "job_description": "Job description"
+        "legal": "Legal"
     },
-    "label": {
+    "job": {
         "location": "Location",
         "level": "Level",
         "language": "Language",
-        "salary": "Salary"
+        "salary": "Salary",
+        "description": "Job description"
+    },
+    "footer": {
+        "message": "Made with ❤️ using"
+    },
+    "apply": {
+        "title": "Apply now",
+        "message": "Don`t waste time. Apply yourself and pave the way for the success you deserve."
     }
 }

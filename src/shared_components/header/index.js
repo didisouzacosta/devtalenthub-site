@@ -57,7 +57,7 @@ function CategoriesCard({ languages, levels }) {
 }
 
 export default function Header({ levels, languages }) {
-    const t = useTranslations('menu');
+    const t = useTranslations();
 
     return (
         <div className={styles.center}>
@@ -71,15 +71,15 @@ export default function Header({ levels, languages }) {
                     />
                 </Link>
                 <ul role='list'>
-                    <li><Link href='/companies'>{t('companies')}</Link></li>
+                    <li><Link href='/companies'>{t('menu.companies')}</Link></li>
                     <li className={styles.categories}>
-                        <span>{t('categories')}</span>
+                        <span>{t('menu.categories')}</span>
                         <CategoriesCard levels={levels} languages={languages} />
                     </li>
-                    <li><Link href="/about-us">{t('about_us')}</Link></li>
-                    <li><Link href="/contact">{t('contact')}</Link></li>
+                    <li><Link href="/about-us">{t('menu.about_us')}</Link></li>
+                    <li><Link href="/contact">{t('menu.contact')}</Link></li>
                 </ul>
-                <Link href="/post-job" prefetch={true} className={utilStyles.button_primary}>{t('post_a_job')}</Link>
+                <Link href="/post-job" prefetch={true} className={utilStyles.button_primary}>{t('action.post_a_job')}</Link>
             </nav>
         </div>
     )

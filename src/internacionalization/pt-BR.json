@@ -9,9 +9,12 @@
         "companies": "Empresas",
         "categories": "Categorias",
         "contact": "Contato",
-        "post_a_job": "Publique uma vaga",
         "privacy_policy": "Politíca de privacidade",
         "cookie_preferences": "Preferência de cookies"
+    },
+    "action": {
+        "post_a_job": "Publique uma vaga",
+        "apply_now": "Aplicar agora"
     },
     "title": {
         "featured_jobs": "Oportunidades em destaques",
@@ -20,13 +23,20 @@
         "pages": "Páginas",
         "languages": "Linguagens",
         "level": "Nível",
-        "legal": "Legal",
-        "job_description": "Descrição da vaga"
+        "legal": "Legal"
     },
-    "label": {
+    "job": {
         "location": "Local",
         "level": "Nível",
         "language": "Linguagem",
-        "salary": "Salário"
+        "salary": "Salário",
+        "description": "Descricação da vaga"
+    },
+    "footer": {
+        "message": "Feito com ❤️ usando"
+    },
+    "apply": {
+        "title": "Aplique agora",
+        "message": "Não perca tempo. Aplique agora e tome o caminho do sucesso que você merece."
     }
 }

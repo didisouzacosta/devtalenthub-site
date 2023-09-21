@@ -68,7 +68,7 @@ export default function Footer({ languages, levels }) {
                 </nav>
 
                 <div className={styles.copyright}>
-                    © Copyright DevTalentHub - Made with ❤️ for delevelopers using <Link href="https://nextjs.org" target="_blank" prefetch={false}>NextJS</Link>.
+                    © Copyright DevTalentHub - {t('footer.message')} <Link href="https://nextjs.org" target="_blank" prefetch={false}>NextJS</Link>.
                 </div>
             </div>
         </footer>

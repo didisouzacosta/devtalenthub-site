@@ -38,29 +38,29 @@ export default function JobDescription({ params: { frontmatter, content } }) {
                     </div>
                     <div className={styles.infos}>
                         <div className={styles.column_wrapper}>
-                            <p>{t('label.location')}</p>
+                            <p>{t('job.location')}</p>
                             <strong>{frontmatter.location}</strong>
                         </div>
                         <div className={styles.column_wrapper}>
-                            <p>{t('label.level')}</p>
+                            <p>{t('job.level')}</p>
                             <strong>{frontmatter.levels?.join(" / ")}</strong>
                         </div>
                         <div className={styles.column_wrapper}>
-                            <p>{t('label.language')}</p>
+                            <p>{t('job.language')}</p>
                             <strong>{frontmatter.languages?.join(" / ")}</strong>
                         </div>
                         <div className={styles.column_wrapper}>
-                            <p>{t('label.salary')}</p>
+                            <p>{t('job.salary')}</p>
                             <strong>{frontmatter.salary ?? '---'}</strong>
                         </div>
                     </div>
                 </div>
                 <div>
-                    <h2>{t('title.job_description')}</h2>
+                    <h2>{t('job.description')}</h2>
                     <div className={styles.description} dangerouslySetInnerHTML={{ __html: md().render(content) }} />
                 </div>
                 <Link href={frontmatter.apply_url} target="_blank" prefetch={false} className={utilStyles.button_primary}>
-                    Apply now
+                    {t('action.apply_now')}
                 </Link>
             </article>
         </Card>
