@@ -1,5 +1,6 @@
 {
-    "home": {
-        "title": "Olá mundo"
+    "banner": {
+        "title": "Feito com foco para desenvolvedores mobile",
+        "subtitle": "Dev Talent Hub traz as melhores oportunidades para desenvolvedores mobile."
     }
 }
