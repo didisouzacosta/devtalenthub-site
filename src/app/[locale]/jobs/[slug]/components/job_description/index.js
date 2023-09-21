@@ -43,7 +43,7 @@ export default function JobDescription({ params: { frontmatter, content } }) {
                         </div>
                         <div className={styles.column_wrapper}>
                             <p>{t('job.level')}</p>
-                            <strong>{frontmatter.levels?.join(" / ")}</strong>
+                            <strong>{frontmatter.levels?.map((level) => t(`job.level-type.${level.toLowerCase()}`)).join(" / ")}</strong>
                         </div>
                         <div className={styles.column_wrapper}>
                             <p>{t('job.language')}</p>
