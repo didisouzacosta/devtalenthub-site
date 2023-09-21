@@ -11,7 +11,10 @@ import { getAllLanguages, getAllLevels } from '@/api/job-api'
 const inter = Inter({ subsets: ['latin'] })
 
 export function generateStaticParams() {
-  return [{ locale: 'pt-br' }, { locale: 'en' }];
+  return [
+    { locale: 'pt-br' },
+    { locale: 'en' }
+  ];
 }
 
 export default async function RootLayout({ children, params: { locale } }) {
