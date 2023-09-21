@@ -1,6 +1,6 @@
 import { find, getAllPublished } from '@/api/job-api'
 
-import JobList from '../components/job_list';
+import JobList from '../../../shared_components/job_list';
 
 export default function Search({ searchParams }) {
     const jobs = find({ searchParams })

@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Link from 'next/link'
 
-import Card from "../../../components/card";
+import Card from "../../../../../shared_components/card";
 
 import styles from './companies_card.module.css'
 import { getFeaturedCompanies } from '@/api/job-api';

@@ -2,13 +2,13 @@ import Link from 'next/link'
 
 import { get } from '@/api/job-api'
 
-import Card from '@/app/components/card'
+import Card from '@/shared_components/card'
 import MoreJobs from './components/more_jobs'
 import JobDescription from './components/job_description'
 
 import utilStyles from '@/util/styles/util.module.css'
 import styles from './job.module.css'
-import Banner300x400 from '@/app/components/ads/300x400'
+import Banner300x400 from '@/shared_components/ads/300x400'
 
 export default function Job({ params: { slug } }) {
     const vacancy = get(slug)

@@ -1,11 +1,11 @@
-import PageContent from "../components/page_content"
+import PageContent from "@/shared_components/page_content"
 
 export const metadata = {
-    title: 'Contact',
+    title: 'About Us',
     description: 'Think a little bit more about us',
 }
 
-export default function ContactLayout({ children }) {
+export default function AboutLayout({ children }) {
     return (
         <PageContent>
             {children}

@@ -1,11 +1,11 @@
-import PageContent from "../components/page_content"
+import PageContent from "../../../shared_components/page_content"
 
 export const metadata = {
-    title: 'Post a job',
+    title: 'Contact',
     description: 'Think a little bit more about us',
 }
 
-export default function PostJobLayout({ children }) {
+export default function ContactLayout({ children }) {
     return (
         <PageContent>
             {children}
