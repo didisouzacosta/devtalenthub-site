@@ -1,0 +1,79 @@
+.content {
+    display: grid;
+    row-gap: 32px;
+}
+
+.header .title {
+    display: flex;
+    vertical-align: middle;
+    margin-bottom: 16px;
+}
+
+.header .title h1 {
+    margin-right: auto;
+    margin-top: 8px;
+}
+
+.header .title .brand {
+    border-radius: 8px;
+    margin-left: 16px;
+}
+
+.header .title .brand_mobile {
+    display: none;
+    border-radius: 8px;
+}
+
+.header .infos {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    justify-items: flex-start;
+    border-top: 1px solid #e0e0ea;
+    border-bottom: 1px solid #e0e0ea;
+    padding: 28px 0;
+}
+
+.header .infos .column_wrapper {
+    color: #0F0F0F;
+}
+
+.header .infos .column_wrapper p {
+    margin-bottom: 8px;
+}
+
+.description {
+    color: #0F0F0F;
+}
+
+.description h1,
+.description h2,
+.description h3,
+.description h4,
+.description h5,
+.description h6 {
+  margin-top: 2rem;
+}
+
+.breadcrumb {
+    margin-bottom: 16px;
+}
+
+@media (max-width: 600px) {
+    .header .title {
+        display: block;
+    }
+
+    .header .title .brand {
+        display: none;
+    }
+
+    .header .title .brand_mobile {
+        display: inline;
+    }
+
+
+    .header .infos {
+        grid-template-columns: repeat(2, 1fr);
+        row-gap: 16px;
+    }
+}

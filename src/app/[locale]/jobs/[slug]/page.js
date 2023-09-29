@@ -1,11 +1,11 @@
 import { get } from '@/api/job-api'
 
-import JobDescription from './components/job-description'
+import Content from './components/content'
 
 export default function Job({ params: { slug } }) {
     const job = get(slug)
 
     return (
-        <JobDescription job={job} />
+        <Content job={job} />
     )
 }
