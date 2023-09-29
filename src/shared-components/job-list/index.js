@@ -4,7 +4,7 @@ import Image from 'next/image'
 import Link from 'next/link'
 import { useTranslations } from 'next-intl';
 
-import styles from './job_list.module.css'
+import styles from './job-list.module.css'
 
 function JobListItem({ job, slug, key }) {
     const t = useTranslations('job')
@@ -51,7 +51,7 @@ function JobListItem({ job, slug, key }) {
     )
 }
 
-export default function JobList({ jobs, title }) {
+export default function JobList({ jobs }) {
     const t = useTranslations()
     const jobListItems = jobs?.map((job, index) => <JobListItem job={job} slug={job.slug} key={index} />)
 
@@ -59,7 +59,6 @@ export default function JobList({ jobs, title }) {
         <section className={styles.container}>
             <div className={styles.job_list}>
                 <div className={styles.job_list_items}>
-                    { title && <h2>{t(title)}</h2> }
                     { jobListItems }
                 </div>
             </div>

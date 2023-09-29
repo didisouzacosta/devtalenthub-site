@@ -8,13 +8,9 @@
     row-gap: 16px;
 }
 
-.job_list_items h2 {
-    margin-bottom: 16px;
-}
-
 .job_list_item {
     display: grid;
-    grid-template-columns: 45% 10% 15% 10% 20%;
+    grid-template-columns: 3fr 1fr 1fr 1fr 1fr;
     column-gap: 16px;
     padding: var(--padding);
     border: 1px solid #e0e0ea;
@@ -68,9 +64,9 @@
     margin-bottom: 0.5rem;
 }
 
-@media (max-width: 1000px) {
+@media (max-width: 800px) {
     .job_list_item {
-        grid-template-columns: repeat(4, auto);
+        grid-template-columns: repeat(4, 1fr);
     }
     .job_list_item .company_wrapper {
         grid-column-start: 1;
