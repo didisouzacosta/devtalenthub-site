@@ -1,6 +1,6 @@
 'use client'
 
-import styles from './search_bar.module.css'
+import styles from './search-bar.module.css'
 
 export default function SearchBar() {
     return (

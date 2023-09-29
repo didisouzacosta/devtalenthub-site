@@ -14,7 +14,7 @@
 
 .job_list_item {
     display: grid;
-    grid-template-columns: 47% 13% 18% 32%;
+    grid-template-columns: 45% 10% 15% 10% 20%;
     column-gap: 16px;
     padding: var(--padding);
     border: 1px solid #e0e0ea;
@@ -70,10 +70,10 @@
 
 @media (max-width: 1000px) {
     .job_list_item {
-        grid-template-columns: repeat(3, auto);
+        grid-template-columns: repeat(4, auto);
     }
     .job_list_item .company_wrapper {
         grid-column-start: 1;
-        grid-column-end: 4;
+        grid-column-end: 5;
     }
 }

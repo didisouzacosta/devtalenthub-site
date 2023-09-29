@@ -8,9 +8,9 @@ import { useTranslations } from 'next-intl';
 import Card from "@/shared-components/card";
 
 import utilStyles from '@/util/styles/util.module.css'
-import styles from './job_description.module.css'
+import styles from './job-description.module.css'
 
-export default function JobDescription({ params: { frontmatter, content } }) {
+export default function JobDescription({ job: { frontmatter, content } }) {
     const t = useTranslations()
 
     return (
@@ -60,7 +60,7 @@ export default function JobDescription({ params: { frontmatter, content } }) {
                     <div className={styles.description} dangerouslySetInnerHTML={{ __html: md().render(content) }} />
                 </div>
                 <Link href={frontmatter.apply_url} target="_blank" prefetch={false} className={utilStyles.button_primary}>
-                    {t('action.apply_now')}
+                    {t('action.apply-now')}
                 </Link>
             </article>
         </Card>

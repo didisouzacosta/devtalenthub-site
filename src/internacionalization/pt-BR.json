@@ -4,11 +4,8 @@
         "subtitle": "Dev Talent Hub traz as melhores oportunidades para desenvolvedores mobile."
     },
     "menu": {
-        "home": "Home",
         "about-us": "Sobre nós",
-        "companies": "Empresas",
-        "categories": "Categorias",
-        "contact": "Contato",
+        "planning": "Planejamento",
         "privacy-policy": "Politíca de privacidade",
         "cookie-preferences": "Preferência de cookies"
     },

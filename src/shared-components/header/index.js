@@ -10,7 +10,7 @@ export default function Header() {
     const t = useTranslations();
 
     return (
-        <div className={styles.center}>
+        <header className={styles.center}>
             <nav className={styles.nav}>
                 <Link href="/home" className={styles.brand}>
                     <Image
@@ -21,11 +21,26 @@ export default function Header() {
                     />
                 </Link>
                 <ul role='list'>
-                    <li><Link href='/companies'>{t('menu.companies')}</Link></li>
-                    <li><Link href="/about-us">{t('menu.about-us')}</Link></li>
-                    <li><Link href="/contact">{t('menu.contact')}</Link></li>
+                    <li>
+                        <Link
+                            href="https://www.linkedin.com/in/adrianosouzacosta"
+                            prefetch={false}
+                            target="_blank"
+                        >
+                            {t('menu.about-us')}
+                        </Link>
+                    </li>
+                    <li>
+                        <Link
+                            href="https://github.com/users/didisouzacosta/projects/2"
+                            prefetch={false}
+                            target="_blank"
+                        >
+                            {t('menu.planning')}
+                        </Link>
+                    </li>
                 </ul>
             </nav>
-        </div>
+        </header>
     )
 }

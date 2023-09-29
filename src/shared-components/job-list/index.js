@@ -43,6 +43,10 @@ function JobListItem({ job, slug, key }) {
                 <p className={styles.title}>{t('language')}</p>
                 <strong>{frontmatter.languages?.join(" / ")}</strong>
             </div>
+            <div className={styles.column_wrapper}>
+                <p className={styles.title}>{t('salary')}</p>
+                <strong>{frontmatter.salary ?? '---'}</strong>
+            </div>
         </Link>
     )
 }

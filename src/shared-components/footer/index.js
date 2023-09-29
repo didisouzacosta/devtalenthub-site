@@ -9,12 +9,10 @@ export default function Footer() {
     const t = useTranslations();
     
     return (
-        <footer className={styles.center}>
-            <div className={styles.footer}>
-                <div className={styles.copyright}>
-                    © Copyright DevTalentHub - {t('footer.message')} <Link href="https://nextjs.org" target="_blank" prefetch={false}>NextJS</Link>.
-                </div>
-            </div>
-        </footer>
+        <div className={styles.center}>
+            <footer className={styles.footer}>
+                © Copyright DevTalentHub - {t('footer.message')} <Link href="https://nextjs.org" target="_blank" prefetch={false}>NextJS</Link>.
+            </footer>
+        </div>
     )
 }
