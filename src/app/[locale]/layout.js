@@ -6,7 +6,6 @@ import { notFound } from 'next/navigation';
 
 import Header from '../../shared-components/header'
 import Footer from '../../shared-components/footer'
-import { getAllLanguages, getAllLevels } from '@/api/job-api'
 
 const inter = Inter({ subsets: ['latin'] })
 
