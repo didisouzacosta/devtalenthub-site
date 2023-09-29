@@ -5,7 +5,7 @@ import Image from 'next/image'
 import md from 'markdown-it';
 import { useTranslations } from 'next-intl';
 
-import Card from "@/shared_components/card";
+import Card from "@/shared-components/card";
 
 import utilStyles from '@/util/styles/util.module.css'
 import styles from './job_description.module.css'

@@ -5,21 +5,21 @@
     },
     "menu": {
         "home": "Home",
-        "about_us": "About us",
+        "about-us": "About us",
         "companies": "Companies",
         "categories": "Categories",
         "contact": "Contact",
-        "privacy_policy": "Privacy policy",
-        "cookie_preferences": "Cookie preferences"
+        "privacy-policy": "Privacy policy",
+        "cookie-preferences": "Cookie preferences"
     },
     "action": {
-        "post_a_job": "Post a job",
-        "apply_now": "Apply now"
+        "post-a-job": "Post a job",
+        "apply-now": "Apply now"
     },
     "title": {
-        "featured_jobs": "Featured jobs",
-        "latest_jobs": "Latest Jobs",
-        "featured_companies": "Featured Companies",
+        "featured-jobs": "Featured jobs",
+        "latest-jobs": "Latest Jobs",
+        "featured-companies": "Featured Companies",
         "pages": "Pages",
         "languages": "Languages",
         "level": "Level",
@@ -44,7 +44,7 @@
         "title": "Apply now",
         "message": "Don`t waste time. Apply yourself and pave the way for the success you deserve."
     },
-    "featured_companies": {
+    "featured-companies": {
         "title": "Featured companies",
         "message": "The best companies for you work."
     }

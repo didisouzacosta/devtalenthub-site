@@ -5,20 +5,20 @@
     },
     "menu": {
         "home": "Home",
-        "about_us": "Sobre nós",
+        "about-us": "Sobre nós",
         "companies": "Empresas",
         "categories": "Categorias",
         "contact": "Contato",
-        "privacy_policy": "Politíca de privacidade",
-        "cookie_preferences": "Preferência de cookies"
+        "privacy-policy": "Politíca de privacidade",
+        "cookie-preferences": "Preferência de cookies"
     },
     "action": {
-        "post_a_job": "Publique uma vaga",
-        "apply_now": "Aplicar agora"
+        "post-a-job": "Publique uma vaga",
+        "apply-now": "Aplicar agora"
     },
     "title": {
-        "featured_jobs": "Oportunidades em destaques",
-        "latest_jobs": "Últimas oportunidades",
+        "featured-jobs": "Oportunidades em destaques",
+        "latest-jobs": "Últimas oportunidades",
         "pages": "Páginas",
         "languages": "Linguagens",
         "level": "Nível",
@@ -43,7 +43,7 @@
         "title": "Aplique agora",
         "message": "Não perca tempo. Aplique agora e tome o caminho do sucesso que você merece."
     },
-    "featured_companies": {
+    "featured-companies": {
         "title": "Empresas em destaque",
         "message": "As melhores empresas para você trabalhar."
     }

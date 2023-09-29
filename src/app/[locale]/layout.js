@@ -4,8 +4,8 @@ import { Analytics } from '@vercel/analytics/react';
 import { NextIntlClientProvider } from 'next-intl';
 import { notFound } from 'next/navigation';
 
-import Header from '../../shared_components/header'
-import Footer from '../../shared_components/footer'
+import Header from '../../shared-components/header'
+import Footer from '../../shared-components/footer'
 import { getAllLanguages, getAllLevels } from '@/api/job-api'
 
 const inter = Inter({ subsets: ['latin'] })
@@ -18,9 +18,6 @@ export function generateStaticParams() {
 }
 
 export default async function RootLayout({ children, params: { locale } }) {
-  const languages = getAllLanguages()
-  const levels = getAllLevels()
-
   let messages;
 
   try {
@@ -36,9 +33,9 @@ export default async function RootLayout({ children, params: { locale } }) {
       </head>
       <body className={inter.className}>
         <NextIntlClientProvider locale={locale} messages={messages}>
-          <Header languages={languages} levels={levels} />
+          <Header />
           {children}
-          <Footer languages={languages} levels={levels} />
+          <Footer />
           <Analytics />
         </NextIntlClientProvider>
       </body>

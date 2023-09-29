@@ -1,24 +1,4 @@
-.grid {
-    display: grid;
-    align-items: flex-start;
-    grid-template-columns: 1fr 300px;
-    column-gap: 48px;
-}
-
-.column {
-    display: grid;
-    row-gap: 16px;
-}
-
 .jobsGroup {
     display: grid;
     gap: 48px;
-}
-
-@media (max-width: 600px) {
-    .grid {
-        display: grid;
-        row-gap: 32px;
-        grid-template-columns: auto;
-    }
 }

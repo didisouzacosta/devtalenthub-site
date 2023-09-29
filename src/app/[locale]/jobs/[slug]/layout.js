@@ -1,5 +1,5 @@
 import { get } from "@/api/job-api"
-import PageContent from "@/shared_components/page_content"
+import PageContent from "@/shared-components/page-content"
 
 export async function generateMetadata({ params: { slug } }) {
     let { frontmatter } = get(slug)

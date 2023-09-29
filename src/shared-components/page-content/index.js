@@ -1,4 +1,4 @@
-import styles from './page_content.module.css'
+import styles from './page-content.module.css'
 
 export default function PageContent({ children }) {
     return (

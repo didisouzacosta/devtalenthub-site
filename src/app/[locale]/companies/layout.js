@@ -1,4 +1,4 @@
-import PageContent from "../../../shared_components/page_content"
+import PageContent from "../../../shared-components/page-content"
 
 export const metadata = {
     title: 'Companies',

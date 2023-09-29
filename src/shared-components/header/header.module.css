@@ -1,0 +1,36 @@
+.center {
+  display: flex;
+  justify-content: center;
+}
+
+.brand {
+  margin-right: auto;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+  max-width: 100%;
+  width: var(--max-width);
+  margin-top: 32px;
+  margin-bottom: 32px;
+}
+
+.nav ul {
+  display: flex;
+  list-style: none;
+  margin: 0px;
+  padding: 0px;
+}
+
+.nav ul li {
+  font-weight: 300;
+  font-size: 18px;
+  margin: 0px;
+  margin-left: 32px;
+  padding: 0px;
+}
+
+.nav ul li:first-child {
+  margin-left: 0px;
+}

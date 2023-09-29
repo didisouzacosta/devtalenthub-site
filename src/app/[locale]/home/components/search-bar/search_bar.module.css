@@ -4,7 +4,6 @@
 
 .search_bar {
     margin: 0 auto;
-    margin-top: -70px;
     padding: var(--padding-extra-large);
     border: 1px solid #e0e0ea;
     border-radius: 16px;

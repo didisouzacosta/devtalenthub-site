@@ -5,7 +5,7 @@ import JobDescription from './components/job_description'
 import ApplyNowCard from './components/apply_now_card'
 
 import styles from './job.module.css'
-import Banner300x400 from '@/shared_components/ads/300x400'
+import Banner300x400 from '@/shared-components/ads/300x400'
 
 export default function Job({ params: { slug } }) {
     const vacancy = get(slug)

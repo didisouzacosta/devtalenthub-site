@@ -3,7 +3,7 @@
 import Link from 'next/link'
 import { useTranslations } from 'next-intl';
 
-import Card from "@/shared_components/card";
+import Card from "@/shared-components/card";
 
 import utilStyles from '@/util/styles/util.module.css'
 
