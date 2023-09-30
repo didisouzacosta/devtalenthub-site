@@ -1,15 +1,6 @@
-.container {
-    padding: 0 var(--padding);
-}
-
 .search_bar {
-    margin: 0 auto;
+    display: grid;
+    column-gap: 16px;
+    grid-template-columns: repeat(3, 1fr);
     margin-bottom: 32px;
-    padding: var(--padding-extra-large);
-    border: 1px solid #e0e0ea;
-    border-radius: 16px;
-    background-color: white;
-    width: 100%;
-    max-width: var(--max-width);
-    box-shadow: rgba(0, 0, 0, 0.04) 0px 4px 12px;
 }
