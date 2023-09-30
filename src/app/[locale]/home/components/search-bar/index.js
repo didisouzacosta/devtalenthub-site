@@ -1,53 +1,44 @@
 'use client'
 
-// import React, { useState } from 'react';
 import { Select } from 'antd';
 
 import styles from './search-bar.module.css'
 import Card from '@/shared-components/card';
 
-// const OPTIONS = ['Apples', 'Nails', 'Bananas', 'Helicopters'];
+export default function SearchBar({ levels, languages, companies }) {
+    const levelOptions = levels?.map((level) => {
+        return { value: level.toLowerCase(), label: level }
+    }) ?? []
 
-export default function SearchBar() {
-    // const [selectedItems, setSelectedItems] = useState([]);
-    // const filteredOptions = OPTIONS.filter((o) => !selectedItems.includes(o));
+    const languageOptions = languages?.map((language) => {
+        return { value: language.toLowerCase(), label: language }
+    }) ?? []
+
+    const companyOptions = companies?.map((company) => {
+        return { value: company.name.toLowerCase(), label: company.name }
+    }) ?? []
 
     return (
         <Card className={styles.search_bar}>
             <Select
-                defaultValue="all"
+                defaultValue={levelOptions[0]}
                 size="large"
                 // onChange={handleChange}
-                options={[
-                    { value: 'all', label: 'Todos os níveis' },
-                    { value: 'junior', label: 'Júnior' },
-                    { value: 'pleno', label: 'Pleno' },
-                    { value: 'senior', label: 'Sênior' }
-                ]}
+                options={levelOptions}
             />
 
             <Select
-                defaultValue="all"
+                defaultValue={languageOptions[0]}
                 size="large"
                 // onChange={handleChange}
-                options={[
-                    { value: 'all', label: 'Qualquer linguagem' },
-                    { value: 'swift', label: 'Swift' },
-                    { value: 'flutter', label: 'Flutter' },
-                    { value: 'react-native', label: 'React Native' },
-                    { value: 'kotlin', label: 'Kotlin' },
-                ]}
+                options={languageOptions}
             />
 
             <Select
-                defaultValue="all"
+                defaultValue={companyOptions[0]}
                 size="large"
                 // onChange={handleChange}
-                options={[
-                    { value: 'all', label: 'Qualquer empresa' },
-                    { value: 'durable', label: 'Durable' },
-                    { value: 'picpay', label: 'PicPay' }
-                ]}
+                options={companyOptions}
             />
         </Card>
     )
