@@ -20,6 +20,7 @@ export default function Header() {
                             width={200}
                             height={55}
                             alt="DevTalentHub"
+                            priority={false}
                         />
                     </Link>
                     <ul role='list'>

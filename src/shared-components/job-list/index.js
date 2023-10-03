@@ -6,7 +6,7 @@ import { useTranslations } from 'next-intl';
 
 import styles from './job-list.module.css'
 
-function JobListItem({ job, slug, key }) {
+function JobListItem({ job, slug }) {
     const t = useTranslations('job')
     const frontmatter = job.frontmatter
     const isFeatured = frontmatter.isFeatured
@@ -17,7 +17,7 @@ function JobListItem({ job, slug, key }) {
             prefetch={isFeatured}
             className={`${styles.job_list_item} ${isFeatured ? styles.featured : ''}`}
         >
-            <div key={key} className={styles.company_wrapper}>
+            <div className={styles.company_wrapper}>
                 <Image
                     src={frontmatter.brand}
                     className={styles.brand}
