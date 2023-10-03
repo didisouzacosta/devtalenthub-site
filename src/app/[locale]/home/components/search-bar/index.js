@@ -38,8 +38,6 @@ export default function SearchBar({ levels, languages, companies }) {
     const selectedLanguage = searchParams.get('language') ?? languageOptions[0].value
     const onlyRemote = searchParams.get('onlyRemote') ?? 'true'
 
-    console.log(onlyRemote)
-
     function search(key, value) {
         router.push(pathname + '?' + createQueryString(key, value))
     }
