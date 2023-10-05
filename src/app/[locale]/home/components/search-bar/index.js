@@ -1,13 +1,13 @@
 'use client'
 
-import { useCallback } from 'react';
+import { useCallback, useEffect } from 'react';
 import { useRouter, usePathname, useSearchParams } from 'next/navigation'
 import { Select, Switch, Form } from 'antd';
 
 import styles from './search-bar.module.css'
 import Card from '@/shared-components/card';
 
-export default function SearchBar({ levels, languages, companies }) {
+export default function SearchBar({ levels, languages, onChange }) {
     const router = useRouter()
     const pathname = usePathname()
     const searchParams = useSearchParams()
@@ -24,19 +24,28 @@ export default function SearchBar({ levels, languages, companies }) {
         }) ?? []
     )
 
+    const level = searchParams.get('level') ?? languageOptions[0].value
+    const language = searchParams.get('language') ?? languageOptions[0].value
+    const onlyRemote = searchParams.get('onlyRemote') ?? 'true'
+
     const createQueryString = useCallback(
         (name, value) => {
             const params = new URLSearchParams(searchParams)
             params.set(name, value)
-
             return params.toString()
         },
         [searchParams]
     )
 
-    const selectedLevel = searchParams.get('level') ?? languageOptions[0].value
-    const selectedLanguage = searchParams.get('language') ?? languageOptions[0].value
-    const onlyRemote = searchParams.get('onlyRemote') ?? 'true'
+    useEffect(() => {
+        if (onChange) {
+            onChange({
+                level,
+                language,
+                onlyRemote
+            })
+        }
+    }, [createQueryString])
 
     function search(key, value) {
         router.push(pathname + '?' + createQueryString(key, value))
@@ -62,7 +71,7 @@ export default function SearchBar({ levels, languages, companies }) {
             >
                 <Select
                     name='level'
-                    defaultValue={selectedLevel}
+                    defaultValue={level}
                     size="large"
                     onChange={levelOnChange}
                     options={levelOptions}
@@ -70,7 +79,7 @@ export default function SearchBar({ levels, languages, companies }) {
 
                 <Select
                     name='language'
-                    defaultValue={selectedLanguage}
+                    defaultValue={language}
                     size="large"
                     onChange={languageOnChange}
                     options={languageOptions}
