@@ -1,6 +1,6 @@
 'use client'
 
-import { useCallback, useEffect, useState } from 'react';
+import { useEffect, useState } from 'react';
 import SearchBar from './components/search-bar'
 import PageContent from '@/shared-components/page-content'
 import JobList from '@/shared-components/job-list'

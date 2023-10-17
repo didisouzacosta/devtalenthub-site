@@ -1,12 +1,12 @@
-import { get } from "@/api/job-api"
+import { getJobBySlug } from "@/api/job-api"
 import PageContent from "@/shared-components/page-content"
 
 export async function generateMetadata({ params: { slug } }) {
-    let { frontmatter } = get(slug)
+    const job = getJobBySlug(slug)
 
     return {
-        title: frontmatter.title,
-        description: frontmatter.description,
+        title: job.title,
+        description: job.description,
     }
 }
 
