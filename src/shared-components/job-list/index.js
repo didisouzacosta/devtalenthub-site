@@ -6,54 +6,51 @@ import { useTranslations } from 'next-intl';
 
 import styles from './job-list.module.css'
 
-function JobListItem({ job, slug }) {
+function JobListItem({ job }) {
     const t = useTranslations('job')
-    const frontmatter = job.frontmatter
-    const isFeatured = frontmatter.isFeatured
 
     return (
         <Link
-            href={`/jobs/${slug}`}
-            prefetch={isFeatured}
-            className={`${styles.job_list_item} ${isFeatured ? styles.featured : ''}`}
+            href={`/jobs/${job.slug}`}
+            prefetch={true}
+            className={`${styles.job_list_item} ${job.isFeatured ? styles.featured : ''}`}
         >
             <div className={styles.company_wrapper}>
                 <Image
-                    src={frontmatter.brand}
+                    src={job.brand}
                     className={styles.brand}
                     width={80}
                     height={80}
                     priority="lazy"
-                    alt={frontmatter.company}
+                    alt={job.company}
                 />
                 <div>
-                    <span className={styles.job_title}><strong>{frontmatter.title}</strong></span>
-                    <span className={styles.company_link}>{frontmatter.company}</span>
+                    <span className={styles.job_title}><strong>{job.title}</strong></span>
+                    <span className={styles.company_link}>{job.company}</span>
                 </div>
             </div>
             <div className={styles.column_wrapper}>
                 <p className={styles.title}>{t('location')}</p>
-                <strong>{frontmatter.location}</strong>
+                <strong>{job.location}</strong>
             </div>
             <div className={styles.column_wrapper}>
                 <p className={styles.title}>{t('level')}</p>
-                <strong>{frontmatter.levels?.map((level) => t(`level-type.${level.toLowerCase()}`)).join(" / ")}</strong>
+                <strong>{job.levels?.map((level) => t(`level-type.${level.toLowerCase()}`)).join(" / ")}</strong>
             </div>
             <div className={styles.column_wrapper}>
                 <p className={styles.title}>{t('language')}</p>
-                <strong>{frontmatter.languages?.join(" / ")}</strong>
+                <strong>{job.languages?.join(" / ")}</strong>
             </div>
             <div className={styles.column_wrapper}>
                 <p className={styles.title}>{t('salary')}</p>
-                <strong>{frontmatter.salary ?? '---'}</strong>
+                <strong>{job.salary ?? '---'}</strong>
             </div>
         </Link>
     )
 }
 
 export default function JobList({ jobs }) {
-    const t = useTranslations()
-    const jobListItems = jobs?.map((job, index) => <JobListItem job={job} slug={job.slug} key={index} />)
+    const jobListItems = jobs?.map((job, index) => <JobListItem job={job} key={index} />)
 
     return (
         <section className={styles.container}>

@@ -1,6 +1,6 @@
 'use client'
 
-import { useCallback, useEffect } from 'react';
+import { useCallback, useEffect, useState } from 'react';
 import SearchBar from './components/search-bar'
 import PageContent from '@/shared-components/page-content'
 import JobList from '@/shared-components/job-list'
@@ -11,11 +11,11 @@ export default function Home() {
     const levels = [] //getAllLevels()
     const languages = [] //getAllLanguages()
     const companies = [] //getAllCompanies()
-    const jobs = [] //getAllJobs()
+    const [jobs, setJobs] = useState([])
 
     const loadData = async () => {
         const jobs = await getAllJobs()
-        console.log(jobs)
+        setJobs(jobs)
     }
 
     useEffect(
