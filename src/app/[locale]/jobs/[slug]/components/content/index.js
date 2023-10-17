@@ -79,7 +79,7 @@ function Content({ job }) {
                     </div>
                     <div>
                         <h2>{t('job.description')}</h2>
-                        <div className={styles.description} dangerouslySetInnerHTML={{ __html: job.content }} />
+                        <div className={styles.description} dangerouslySetInnerHTML={{ __html: ''}} />
                     </div>
                     <Link href={job.apply_url} target="_blank" prefetch={false} className={utilStyles.button_primary}>
                         {t('action.apply-now')}
