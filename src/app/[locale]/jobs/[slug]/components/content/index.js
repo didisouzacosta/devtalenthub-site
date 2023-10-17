@@ -2,7 +2,7 @@
 
 import Link from 'next/link'
 import Image from 'next/image'
-import md from 'markdown-it';
+import Markdown from 'react-markdown'
 import { useTranslations } from 'next-intl';
 import { Breadcrumb } from 'antd';
 
@@ -11,13 +11,13 @@ import Card from "@/shared-components/card";
 import utilStyles from '@/util/styles/util.module.css'
 import styles from './content.module.css'
 
-function EmptyContent() {
+function Loading() {
     return (
-        <>Carregando...</>
+        <Card>Carregando...</Card>
     )
 }
 
-function Body({ job }) {
+function Content({ job }) {
     const t = useTranslations()
     
     return (
@@ -79,7 +79,7 @@ function Body({ job }) {
                     </div>
                     <div>
                         <h2>{t('job.description')}</h2>
-                        <div className={styles.description} dangerouslySetInnerHTML={{ __html: md().render(job.content) }} />
+                        <div className={styles.description} dangerouslySetInnerHTML={{ __html: job.content }} />
                     </div>
                     <Link href={job.apply_url} target="_blank" prefetch={false} className={utilStyles.button_primary}>
                         {t('action.apply-now')}
@@ -90,10 +90,10 @@ function Body({ job }) {
     )
 }
 
-export default function Content({ job }) {
+export default function ({ job }) {
     return (
         <>
-        {job !== null ? <Body job={job} /> : <EmptyContent />}
+        {job !== null ? <Content job={job} /> : <Loading />}
         </>
     )
 }
