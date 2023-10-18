@@ -1,5 +1,7 @@
 'use client'
 
+import useSWR from 'swr'
+import { getAllJobs } from '@/api/job-api'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useTranslations } from 'next-intl';
@@ -8,12 +10,13 @@ import styles from './job-list.module.css'
 
 function JobListItem({ job }) {
     const t = useTranslations('job')
+    const isFeatured = job.salary != null
 
     return (
         <Link
             href={`/jobs/${job.slug}`}
             prefetch={true}
-            className={`${styles.job_list_item} ${job.isFeatured ? styles.featured : ''}`}
+            className={`${styles.job_list_item} ${isFeatured ? styles.featured : ''}`}
         >
             <div className={styles.company_wrapper}>
                 <Image
@@ -49,14 +52,17 @@ function JobListItem({ job }) {
     )
 }
 
-export default function JobList({ jobs }) {
-    const jobListItems = jobs?.map((job, index) => <JobListItem job={job} key={index} />)
+export default function JobList() {
+    const { data, error, isLoading } = useSWR('getAllJobs', getAllJobs)
+
+    if (error) return <div>failed to load</div>
+    if (isLoading) return <div>loading...</div>
 
     return (
         <section className={styles.container}>
             <div className={styles.job_list}>
                 <div className={styles.job_list_items}>
-                    { jobListItems }
+                    { data?.map((job, index) => <JobListItem job={job} key={index} />) }
                 </div>
             </div>
         </section>
