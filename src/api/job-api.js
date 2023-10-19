@@ -5,7 +5,7 @@ const database = getFirestore(firebase_app)
 
 export async function getLevels() {
     const jobs = await getAllJobs()
-    const levels = jobs.flatMap((job) => job.levels).reduce((accumulator, current) => {
+    const levels = jobs.map((job) => job.level).reduce((accumulator, current) => {
         if (!accumulator.includes(current)) accumulator.push(current)
         return accumulator 
     }, [])
@@ -30,7 +30,7 @@ export async function searchJobs(params) {
     ]
         
     if (language != 'all') queryConstraints.push(where("languages", "array-contains", language))
-    // if (level != 'all') queryConstraints.push(where("levels", "array-contains", level))
+    if (level != 'all') queryConstraints.push(where("level", "==", level))
 
     const q = query(c, ...queryConstraints)
     const snapshot = await getDocs(q)

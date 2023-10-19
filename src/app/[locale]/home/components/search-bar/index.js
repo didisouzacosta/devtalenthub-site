@@ -23,7 +23,7 @@ export default function SearchBar({ onChange }) {
         }) ?? []
     )
 
-    const languageOptions = [{ value: 'all', label: 'Todos as linguagens' }].concat(
+    const languageOptions = [{ value: 'all', label: 'Todas as linguagens' }].concat(
         languages?.map((language) => {
             return { value: language, label: language }
         }) ?? []

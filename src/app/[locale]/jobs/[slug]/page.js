@@ -64,7 +64,7 @@ export default function Job({ params: { slug } }) {
                             </div>
                             <div className={styles.column_wrapper}>
                                 <p>{t('job.level')}</p>
-                                <strong>{data.levels?.map((level) => t(`job.level-type.${level.toLowerCase()}`)).join(" / ")}</strong>
+                                <strong>{t(`job.level-type.${data.level?.toLowerCase()}`)}</strong>
                             </div>
                             <div className={styles.column_wrapper}>
                                 <p>{t('job.language')}</p>
