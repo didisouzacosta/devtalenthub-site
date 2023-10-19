@@ -29,8 +29,10 @@ export async function searchJobs(params) {
         limit(20)
     ]
         
-    if (language != 'all') queryConstraints.push(where("languages", "array-contains", language))
-    if (level != 'all') queryConstraints.push(where("level", "==", level))
+    if (language && language != 'all') queryConstraints.push(where("languages", "array-contains", language))
+    if (level && level != 'all') queryConstraints.push(where("level", "==", level))
+
+    console.log(queryConstraints)
 
     const q = query(c, ...queryConstraints)
     const snapshot = await getDocs(q)
