@@ -1,7 +1,7 @@
 'use client'
 
 import useSWR from 'swr'
-import { getAllJobs } from '@/api/job-api'
+import { findJobs } from '@/api/job-api'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useTranslations } from 'next-intl';
@@ -52,8 +52,8 @@ function JobListItem({ job }) {
     )
 }
 
-export default function JobList() {
-    const { data, error, isLoading } = useSWR('getAllJobs', getAllJobs)
+export default function JobList({ query }) {
+    const { data, error, isLoading } = useSWR(query, findJobs)
 
     if (error) return <div>failed to load</div>
     if (isLoading) return <div>loading...</div>
