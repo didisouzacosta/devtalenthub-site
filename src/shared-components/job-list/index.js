@@ -1,12 +1,11 @@
 'use client'
 
-import useSWR from 'swr'
-import { findJobs } from '@/api/job-api'
 import Image from 'next/image'
 import Link from 'next/link'
 import { useTranslations } from 'next-intl';
 
 import styles from './job-list.module.css'
+import useSearch from '@/hooks/useSearch'
 
 function JobListItem({ job }) {
     const t = useTranslations('job')
@@ -53,16 +52,16 @@ function JobListItem({ job }) {
 }
 
 export default function JobList({ query }) {
-    const { data, error, isLoading } = useSWR(query, findJobs)
+    const { result, resultError, resultIsLoading } = useSearch(query)
 
-    if (error) return <div>failed to load</div>
-    if (isLoading) return <div>loading...</div>
+    if (resultError) return <div>failed to load</div>
+    if (resultIsLoading) return <div>loading...</div>
 
     return (
         <section className={styles.container}>
             <div className={styles.job_list}>
                 <div className={styles.job_list_items}>
-                    { data?.map((job, index) => <JobListItem job={job} key={index} />) }
+                    { result?.map((job, index) => <JobListItem job={job} key={index} />) }
                 </div>
             </div>
         </section>

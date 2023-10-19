@@ -1,13 +1,12 @@
 import firebase_app from '@/util/firebase'
-import { getFirestore, query, where, collection, getDocs } from 'firebase/firestore/lite'
+import { getFirestore, query, where, collection, getDocs, orderBy, limit } from 'firebase/firestore/lite'
 
 const database = getFirestore(firebase_app)
 
 export async function getLevels() {
     const jobs = await getAllJobs()
     const levels = jobs.flatMap((job) => job.levels).reduce((accumulator, current) => {
-        if (accumulator.includes(current)) return
-        accumulator.push(current)
+        if (!accumulator.includes(current)) accumulator.push(current)
         return accumulator 
     }, [])
     return levels
@@ -16,21 +15,27 @@ export async function getLevels() {
 export async function getLanguages() {
     const jobs = await getAllJobs()
     const languages = jobs.flatMap((job) => job.languages).reduce((accumulator, current) => {
-        if (accumulator.includes(current)) return
-        accumulator.push(current)
+        if (!accumulator.includes(current)) accumulator.push(current)
         return accumulator 
     }, [])
     return languages
 }
 
-export async function findJobs(params) {
+export async function searchJobs(params) {
+    const { level, language, onlyRemote } = params
     const c = collection(database, 'jobs')
-    const q = query(c, 
-        where("isRemote", "==", params?.onlyRemote === 'true'),
-        where("languages", "array-contains", 'iOS'),
-        // where("levels", "array-contains", 'Senior')
-    )
+    const queryConstraints = [
+        where("isRemote", "==", onlyRemote === 'true'),
+        limit(20)
+    ]
+        
+    if (language != 'all') queryConstraints.push(where("languages", "array-contains", language))
+    // if (level != 'all') queryConstraints.push(where("levels", "array-contains", level))
+
+    const q = query(c, ...queryConstraints)
     const snapshot = await getDocs(q)
+
+    if (snapshot.empty) return []
 
     return snapshot.docs.map(doc => doc.data())
 }

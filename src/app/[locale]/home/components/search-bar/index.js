@@ -19,13 +19,13 @@ export default function SearchBar({ onChange }) {
 
     const levelOptions = [{ value: 'all', label: 'Todos os níveis' }].concat(
         levels?.map((level) => {
-            return { value: level.toLowerCase(), label: level }
+            return { value: level, label: level }
         }) ?? []
     )
 
     const languageOptions = [{ value: 'all', label: 'Todos as linguagens' }].concat(
         languages?.map((language) => {
-            return { value: language.toLowerCase(), label: language }
+            return { value: language, label: language }
         }) ?? []
     )
 
