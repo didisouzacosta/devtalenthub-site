@@ -42,14 +42,6 @@ export default function Header() {
                                 {t('menu.planning')}
                             </Link>
                         </li>
-                        <li>
-                            <Link
-                                href="/editor"
-                                prefetch={true}
-                            >
-                                {t('menu.editor')}
-                            </Link>
-                        </li>
                     </ul>
                 </nav>
             </header>

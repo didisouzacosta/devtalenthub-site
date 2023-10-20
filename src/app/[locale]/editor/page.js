@@ -1,14 +1,30 @@
 'use client'
 
-import PageContent from '@/shared-components/page-content';
 import { useState } from 'react'
+import PageContent from '@/shared-components/page-content';
+import { jobSlugfy } from "@/util/slugfy"
+
+import styles from './editor.module.css'
+import FormEditor from './components/form';
+import FormPreview from './components/preview';
+import JobsListEditor from './components/jobs-list';
 
 export default function Editor() {
-    const [value, setValue] = useState("**Hello world!!!**");
+    const [formValues, setFormValues] = useState({});
+
+    const onValuesChange = (values) => {
+        let updatedValues = {...formValues, ...values}
+        updatedValues.slug = jobSlugfy(updatedValues)
+        setFormValues(updatedValues)
+    }
 
     return (
         <PageContent>
-            content
+            <div className={styles.grid}>
+                <div><JobsListEditor /></div>
+                <div><FormEditor onValuesChange={onValuesChange} /></div>
+                <div><FormPreview values={formValues} /></div>
+            </div>
         </PageContent>
     )
 }
