@@ -28,7 +28,7 @@ export default function FormPreview({ values }) {
                     />
                 </p>
             }
-            { infos.map((item) => <p><strong>{item.label}</strong><br/> {item.value ?? '---'}</p>) }
+            { infos.map((item, index) => <p key={index}><strong>{item.label}</strong><br/> {item.value ?? '---'}</p>) }
             { values.apply_url &&
                 <p>
                     <strong>Apply URL</strong><br/>
