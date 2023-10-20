@@ -1,13 +1,14 @@
 import firebase_app from '@/util/firebase'
-import { getFirestore, query, where, collection, getDocs, orderBy, limit } from 'firebase/firestore/lite'
+import { getFirestore, query, where, collection, getDocs, doc, setDoc, limit } from 'firebase/firestore/lite'
 
 const database = getFirestore(firebase_app)
+
 
 export async function getLevels() {
     const jobs = await getAllJobs()
     const levels = jobs.map((job) => job.level).reduce((accumulator, current) => {
         if (!accumulator.includes(current)) accumulator.push(current)
-        return accumulator 
+        return accumulator
     }, [])
     return levels
 }
@@ -16,7 +17,7 @@ export async function getLanguages() {
     const jobs = await getAllJobs()
     const languages = jobs.flatMap((job) => job.languages).reduce((accumulator, current) => {
         if (!accumulator.includes(current)) accumulator.push(current)
-        return accumulator 
+        return accumulator
     }, [])
     return languages
 }
@@ -28,7 +29,7 @@ export async function searchJobs(params) {
         where("isRemote", "==", onlyRemote === 'true'),
         limit(20)
     ]
-        
+
     if (language && language != 'all') queryConstraints.push(where("languages", "array-contains", language))
     if (level && level != 'all') queryConstraints.push(where("level", "==", level))
 
@@ -48,8 +49,13 @@ export async function getAllJobs() {
 
 export async function getJobBySlug(slug) {
     const c = collection(database, 'jobs')
-    const q = query(c, where('slug', '==', slug)) 
+    const q = query(c, where('slug', '==', slug))
     const snapshot = await getDocs(q)
     const data = snapshot.docs.map(doc => doc.data())
     return data[0]
+}
+
+export async function saveJob(job) {
+    const c = collection(database, 'jobs')
+    return await setDoc(doc(c, job.slug), job)
 }

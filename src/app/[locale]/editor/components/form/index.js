@@ -2,7 +2,7 @@
 
 import { Button, Checkbox, Form, Input, Select, Card } from 'antd';
 
-export default function FormEditor({ onFinish, onValuesChange }) {
+export default function FormEditor({ initialValues, onFinish, onValuesChange }) {
     const levels = ['Junior', 'Pleno', 'Senior', 'Specialist']
     const languages = ['Android', 'iOS', 'React Native', 'Flutter']
 
@@ -13,10 +13,7 @@ export default function FormEditor({ onFinish, onValuesChange }) {
                 layout="vertical"
                 onFinish={onFinish}
                 onValuesChange={onValuesChange}
-                autoComplete="off"
-                initialValues={{
-                    isRemote: true,
-                }}
+                initialValues={initialValues}
             >
                 <Form.Item
                     label="Title"

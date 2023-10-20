@@ -31,8 +31,7 @@ export default function FormPreview({ values }) {
             { infos.map((item, index) => <p key={index}><strong>{item.label}</strong><br/> {item.value ?? '---'}</p>) }
             { values.apply_url &&
                 <p>
-                    <strong>Apply URL</strong><br/>
-                    <Link href={values.apply_url}>{values.apply_url}</Link>
+                    <Link href={values.apply_url}>Apply URL</Link>
                 </p>
             }
         </Card>
