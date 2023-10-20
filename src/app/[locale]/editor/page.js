@@ -25,7 +25,7 @@ export default function Editor() {
         <PageContent>
             <div className={styles.grid}>
                 <div><JobsListEditor /></div>
-                <div><FormEditor onValuesChange={onValuesChange} onFinish={onFinish} /></div>
+                <div><FormEditor onValuesChange={onValuesChange} onFinish={async () => await onFinish()} /></div>
                 <div><FormPreview values={formValues} /></div>
             </div>
         </PageContent>
