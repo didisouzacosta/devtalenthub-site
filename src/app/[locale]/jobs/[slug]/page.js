@@ -1,20 +1,19 @@
 'use client'
 
-import useSWR from 'swr'
 import Link from 'next/link'
 import Image from 'next/image'
 import { useTranslations } from 'next-intl';
 import { Breadcrumb } from 'antd';
 
-import { getJobBySlug } from '@/api/job-api'
 import Card from "@/shared-components/card";
 
 import utilStyles from '@/util/styles/util.module.css'
 import styles from './page.module.css'
+import useJob from '@/hooks/useJob';
 
 export default function Job({ params: { slug } }) {
     const t = useTranslations()
-    const { data, error, isLoading } = useSWR(slug, getJobBySlug)
+    const { job, error, isLoading } = useJob(slug)
 
     if (error) return <div>failed to load</div>
     if (isLoading) return <div>loading...</div>
@@ -31,7 +30,7 @@ export default function Job({ params: { slug } }) {
                         title: 'Jobs',
                     },
                     {
-                        title: data.title,
+                        title: job.title,
                     }
                 ]}
             />
@@ -40,39 +39,39 @@ export default function Job({ params: { slug } }) {
                     <div className={styles.header}>
                         <div className={styles.title}>
                             <Image
-                                src={data.brand}
+                                src={job.brand}
                                 className={styles.brand_mobile}
                                 width={60}
                                 height={60}
                                 priority="lazy"
-                                alt={data.company}
+                                alt={job.company}
                             />
-                            <h1>{data.title}</h1>
+                            <h1>{job.title}</h1>
                             <Image
-                                src={data.brand}
+                                src={job.brand}
                                 className={styles.brand}
                                 width={60}
                                 height={60}
                                 priority="lazy"
-                                alt={data.company}
+                                alt={job.company}
                             />
                         </div>
                         <div className={styles.infos}>
                             <div className={styles.column_wrapper}>
                                 <p>{t('job.location')}</p>
-                                <strong>{data.location}</strong>
+                                <strong>{job.isRemote ? t('job.remote') : job.location}</strong>
                             </div>
                             <div className={styles.column_wrapper}>
                                 <p>{t('job.level')}</p>
-                                <strong>{t(`job.level-type.${data.level?.toLowerCase()}`)}</strong>
+                                <strong>{t(`job.level-type.${job.level?.toLowerCase()}`)}</strong>
                             </div>
                             <div className={styles.column_wrapper}>
                                 <p>{t('job.language')}</p>
-                                <strong>{data.languages?.join(" / ")}</strong>
+                                <strong>{job.languages?.join(" / ")}</strong>
                             </div>
                             <div className={styles.column_wrapper}>
                                 <p>{t('job.salary')}</p>
-                                <strong>{data.salary ?? '---'}</strong>
+                                <strong>{job.salary ?? '---'}</strong>
                             </div>
                         </div>
                     </div>
@@ -80,7 +79,7 @@ export default function Job({ params: { slug } }) {
                         <h2>{t('job.description')}</h2>
                         <div className={styles.description} dangerouslySetInnerHTML={{ __html: ''}} />
                     </div>
-                    <Link href={data.apply_url} target="_blank" prefetch={false} className={utilStyles.button_primary}>
+                    <Link href={job.apply_url} target="_blank" prefetch={false} className={utilStyles.button_primary}>
                         {t('action.apply-now')}
                     </Link>
                 </article>

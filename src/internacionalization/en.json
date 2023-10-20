@@ -29,11 +29,17 @@
         "language": "Language",
         "salary": "Salary",
         "description": "Job description",
+        "remote": "Remote",
         "level-type": {
             "junior": "Junior",
             "pleno": "Pleno",
             "senior": "Senior"
         }
+    },
+    "search": {
+        "all-languages": "All languages",
+        "all-levels": "All levels",
+        "only-remote": "Only remote"
     },
     "footer": {
         "message": "Made with ❤️ using"

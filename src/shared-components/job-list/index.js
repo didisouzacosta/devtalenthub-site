@@ -33,7 +33,7 @@ function JobListItem({ job }) {
             </div>
             <div className={styles.column_wrapper}>
                 <p className={styles.title}>{t('location')}</p>
-                <strong>{job.location}</strong>
+                <strong>{job.isRemote ? t('remote') : job.location}</strong>
             </div>
             <div className={styles.column_wrapper}>
                 <p className={styles.title}>{t('level')}</p>

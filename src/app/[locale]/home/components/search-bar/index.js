@@ -3,6 +3,7 @@
 import { useCallback, useEffect } from 'react';
 import { useRouter, usePathname, useSearchParams } from 'next/navigation'
 import { Select, Switch, Form } from 'antd';
+import { useTranslations } from 'next-intl';
 
 import styles from './search-bar.module.css'
 import Card from '@/shared-components/card';
@@ -10,6 +11,7 @@ import useLevels from '@/hooks/useLevels';
 import useLanguages from '@/hooks/useLaguages';
 
 export default function SearchBar({ onChange }) {
+    const t = useTranslations()
     const { levels, levelsIsLoading } = useLevels()
     const { languages, languagesIsLoading } = useLanguages()
 
@@ -17,13 +19,13 @@ export default function SearchBar({ onChange }) {
     const pathname = usePathname()
     const searchParams = useSearchParams()
 
-    const levelOptions = [{ value: 'all', label: 'Todos os níveis' }].concat(
+    const levelOptions = [{ value: 'all', label: t(`search.all-levels`) }].concat(
         levels?.map((level) => {
-            return { value: level, label: level }
+            return { value: level, label: t(`job.level-type.${level.toLowerCase()}`) }
         }) ?? []
     )
 
-    const languageOptions = [{ value: 'all', label: 'Todas as linguagens' }].concat(
+    const languageOptions = [{ value: 'all', label: t(`search.all-languages`) }].concat(
         languages?.map((language) => {
             return { value: language, label: language }
         }) ?? []
@@ -97,7 +99,7 @@ export default function SearchBar({ onChange }) {
                         name='onlyRemote'
                         onChange={onlyRemoteOnChange}
                         defaultChecked={onlyRemote === 'true'}
-                    /> Only remote jobs
+                    /> { t(`search.only-remote`) }
                 </div>
             </Form>
         </Card>

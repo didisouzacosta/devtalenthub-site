@@ -28,11 +28,17 @@
         "language": "Linguagem",
         "salary": "Salário",
         "description": "Descricação da vaga",
+        "remote": "Remoto",
         "level-type": {
             "junior": "Júnior",
             "pleno": "Pleno",
             "senior": "Sênior"
         }
+    },
+    "search": {
+        "all-languages": "Todas as linguagens",
+        "all-levels": "Todos os níveis",
+        "only-remote": "Somente remotas"
     },
     "footer": {
         "message": "Feito com ❤️ usando"
