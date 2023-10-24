@@ -21,6 +21,7 @@ export default function FormPreview({ values }) {
                 <p>
                     <Image
                         src={values.brand}
+                        alt={values.title}
                         width={80}
                         height={80}
                         priority="lazy"
