@@ -11,5 +11,18 @@ function slugify(str) {
 
 export function jobSlugfy(values) {
     const {title, company, level, languages, salary, isRemote} = values
-    return slugify(`${title ?? ''} ${company ?? ''} ${level ?? ''} ${languages?.join('-') ?? ''} ${salary ?? ''} ${isRemote ? 'remote' : ''}`)
+    const components = [
+        title,
+        company,
+        level,
+        languages?.join('-'),
+        salary,
+        isRemote ? 'remote' : ''
+    ].join(' ')
+
+    let slug = slugify(components)
+
+    let uniqueValues = [...new Set(slug.split('-'))].join('-')
+
+    return uniqueValues
 }
