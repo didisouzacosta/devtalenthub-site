@@ -1,17 +1,5 @@
 'use client'
 
-<<<<<<< Updated upstream
-import PageContent from '@/shared-components/page-content';
-import { useState } from 'react'
-
-export default function Editor() {
-    const [value, setValue] = useState("**Hello world!!!**");
-
-    return (
-        <PageContent>
-            content
-        </PageContent>
-=======
 import { useState } from 'react'
 import { message } from 'antd'
 import PageContent from '@/shared-components/page-content'
@@ -75,6 +63,5 @@ export default function Editor() {
                 </div>
             </PageContent>
         </>
->>>>>>> Stashed changes
     )
 }
