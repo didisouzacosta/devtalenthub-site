@@ -10,12 +10,15 @@ import FormEditor from './components/form'
 import FormPreview from './components/preview'
 import JobsListEditor from './components/jobs-list'
 import { saveJob } from '@/api/job-api'
+import useGetAllJobs from '@/hooks/useGetAllJobs'
 
 export default function Editor() {
     const key = 'updatable';
     const [messageApi, contextHolder] = message.useMessage();
     const [formValues, setFormValues] = useState({})
     const [isLoading, setIsLoading] = useState(false)
+
+    const { result: jobs, isLoading: isLoadingAllJobs, refresh } = useGetAllJobs()
 
     const onValuesChange = (values) => {
         let updatedValues = { ...formValues, ...values }
@@ -40,7 +43,8 @@ export default function Editor() {
                     content: 'Saved!',
                     duration: 1
                 })
-            }).catch(() => {
+                refresh()
+            }).catch((err) => {
                 messageApi.open({
                     key,
                     type: 'error',
@@ -57,7 +61,7 @@ export default function Editor() {
             {contextHolder}
             <PageContent>
                 <div className={styles.grid}>
-                    <div><JobsListEditor /></div>
+                    <div><JobsListEditor jobs={jobs} isLoading={isLoadingAllJobs} /></div>
                     <div><FormEditor isLoading={isLoading} onValuesChange={onValuesChange} onFinish={onFinish} /></div>
                     <div><FormPreview values={formValues} /></div>
                 </div>

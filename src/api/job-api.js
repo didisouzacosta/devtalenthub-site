@@ -26,8 +26,7 @@ export async function searchJobs(params) {
     const { level, language, onlyRemote } = params
     const c = collection(database, 'jobs')
     const queryConstraints = [
-        where("isRemote", "==", onlyRemote === 'true'),
-        limit(20)
+        where("isRemote", "==", (onlyRemote ?? 'true') === 'true')
     ]
 
     if (language && language != 'all') queryConstraints.push(where("languages", "array-contains", language))

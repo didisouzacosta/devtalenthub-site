@@ -5,7 +5,7 @@ import Link from 'next/link'
 import { useTranslations } from 'next-intl';
 
 import styles from './job-list.module.css'
-import useSearch from '@/hooks/useSearch'
+import useSearchJobs from '@/hooks/useSearchJobs'
 
 function JobListItem({ job }) {
     const t = useTranslations('job')
@@ -52,7 +52,7 @@ function JobListItem({ job }) {
 }
 
 export default function JobList({ query }) {
-    const { result, resultError, resultIsLoading } = useSearch(query)
+    const { result, resultError, resultIsLoading } = useSearchJobs(query)
 
     if (resultError) return <div>failed to load</div>
     if (resultIsLoading) return <div>loading...</div>
