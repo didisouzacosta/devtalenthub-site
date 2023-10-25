@@ -78,8 +78,7 @@ export default function Job({ params: { slug } }) {
                     </div>
                     <div>
                         <h2>{t('job.description')}</h2>
-                        <ReactMarkdown children={job.description} />
-                        {/* <div className={styles.description} dangerouslySetInnerHTML={{ __html: job.description}} /> */}
+                        <ReactMarkdown>{job.description}</ReactMarkdown>
                     </div>
                     <Link href={job.apply_url} target="_blank" prefetch={false} className={utilStyles.button_primary}>
                         {t('action.apply-now')}

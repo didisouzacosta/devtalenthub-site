@@ -33,7 +33,7 @@ export default function FormPreview({ values }) {
             <Space direction="vertical" style={{ width: '100%' }}>
                 {/* <Alert message="Still exists a job with this same slug!" type="error" showIcon /> */}
                 { infos.map((item, index) => <p key={index}><strong>{item.label}</strong><br/> {item.value ?? '---'}</p>) }
-                { values.description && <ReactMarkdown children={values.description} /> }
+                { values.description && <ReactMarkdown>{values.description}</ReactMarkdown> }
                 { values.apply_url &&
                     <p>
                         <Link href={values.apply_url}>Apply URL</Link>
