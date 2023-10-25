@@ -4,6 +4,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import { useTranslations } from 'next-intl';
 import { Breadcrumb } from 'antd';
+import ReactMarkdown from "react-markdown";
 
 import Card from "@/shared-components/card";
 
@@ -77,7 +78,8 @@ export default function Job({ params: { slug } }) {
                     </div>
                     <div>
                         <h2>{t('job.description')}</h2>
-                        <div className={styles.description} dangerouslySetInnerHTML={{ __html: job.description}} />
+                        <ReactMarkdown children={job.description} />
+                        {/* <div className={styles.description} dangerouslySetInnerHTML={{ __html: job.description}} /> */}
                     </div>
                     <Link href={job.apply_url} target="_blank" prefetch={false} className={utilStyles.button_primary}>
                         {t('action.apply-now')}
