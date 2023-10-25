@@ -114,6 +114,23 @@ export default function FormEditor({ isLoading, onFinish, onValuesChange }) {
                     <Checkbox>Is Remote</Checkbox>
                 </Form.Item>
 
+                <Form.Item
+                    label="Description"
+                    name="description"
+                    rules={[
+                        {
+                            required: true,
+                            message: 'Please input the description!',
+                        },
+                    ]}
+                >
+                    <Input.TextArea
+                        allowClear
+                        showCount
+                        autoSize={{minRows: 20}}
+                    />
+                </Form.Item>
+
                 <Form.Item>
                     <Button type="primary" htmlType="submit">
                         Submit
