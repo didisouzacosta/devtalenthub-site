@@ -2,7 +2,8 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-import { Card } from 'antd';
+import { Card, Alert, Space } from 'antd';
+
 
 import styles from './preview.module.css'
 
@@ -29,12 +30,15 @@ export default function FormPreview({ values }) {
                     />
                 </p>
             }
-            { infos.map((item, index) => <p key={index}><strong>{item.label}</strong><br/> {item.value ?? '---'}</p>) }
-            { values.apply_url &&
-                <p>
-                    <Link href={values.apply_url}>Apply URL</Link>
-                </p>
-            }
+            <Space direction="vertical" style={{ width: '100%' }}>
+                {/* <Alert message="Still exists a job with this same slug!" type="error" showIcon /> */}
+                { infos.map((item, index) => <p key={index}><strong>{item.label}</strong><br/> {item.value ?? '---'}</p>) }
+                { values.apply_url &&
+                    <p>
+                        <Link href={values.apply_url}>Apply URL</Link>
+                    </p>
+                }
+            </Space>
         </Card>
     )
 }

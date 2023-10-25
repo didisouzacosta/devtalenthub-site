@@ -1,8 +1,13 @@
 import firebase_app from '@/util/firebase'
-import { getFirestore, query, where, collection, getDocs, doc, setDoc, limit } from 'firebase/firestore/lite'
+import { getFirestore, query, where, collection, getDocs, doc, addDoc } from 'firebase/firestore/lite'
 
 const database = getFirestore(firebase_app)
 
+function parseDocuments(docs) {
+    return docs?.map(doc => {
+        return {id: doc.id, ...doc.data()}
+    })
+}
 
 export async function getLevels() {
     const jobs = await getAllJobs()
@@ -37,24 +42,24 @@ export async function searchJobs(params) {
 
     if (snapshot.empty) return []
 
-    return snapshot.docs.map(doc => doc.data())
+    return parseDocuments(snapshot.docs)
 }
 
 export async function getAllJobs() {
     const c = collection(database, 'jobs')
     const snapshot = await getDocs(c)
-    return snapshot.docs.map(doc => doc.data())
+    return parseDocuments(snapshot.docs)
 }
 
 export async function getJobBySlug(slug) {
     const c = collection(database, 'jobs')
     const q = query(c, where('slug', '==', slug))
     const snapshot = await getDocs(q)
-    const data = snapshot.docs.map(doc => doc.data())
+    const data = parseDocuments(snapshot.docs)
     return data[0]
 }
 
 export async function saveJob(job) {
     const c = collection(database, 'jobs')
-    return await setDoc(doc(c, job.slug), job)
+    return await addDoc(c, job)
 }

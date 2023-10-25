@@ -9,8 +9,8 @@ export default function useGetAllJobs() {
     const { data, error, isLoading } = useSWR('getAllJobs', getAllJobs)
     return {
         result: data,
-        resultError: error,
-        resultIsLoading: isLoading,
+        error: error,
+        isLoading: isLoading,
         refresh
     }
 }
