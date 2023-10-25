@@ -2,7 +2,7 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-import { Card, Alert, Space } from 'antd';
+import { Card, Space } from 'antd';
 
 
 import styles from './preview.module.css'
@@ -14,6 +14,7 @@ export default function FormPreview({ values }) {
         {label: 'Company', value: values.company},
         {label: 'Level', value: values.level},
         {label: 'Languages', value: values.languages?.join(', ')},
+        {label: 'Description', value: values.description}
     ]
 
     return (
