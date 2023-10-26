@@ -29,6 +29,7 @@ export default async function RootLayout({ children, params: { locale } }) {
     <html lang={locale}>
       <head>
         <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-6518499187853251" crossorigin="anonymous"></script>
+        <link rel="icon" href="/favicon.svg" sizes="any" />
       </head>
       <body className={inter.className}>
         <NextIntlClientProvider locale={locale} messages={messages}>

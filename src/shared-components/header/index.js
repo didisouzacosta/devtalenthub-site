@@ -16,11 +16,11 @@ export default function Header() {
                 <nav className={styles.nav}>
                     <Link href="/home" className={styles.brand}>
                         <Image
-                            src="/devtalent-hub.png"
+                            src="/devtalenthub-logo.svg"
                             width={200}
-                            height={55}
+                            height={65}
                             alt="DevTalentHub"
-                            priority={false}
+                            priority={true}
                         />
                     </Link>
                     <ul role='list'>
