@@ -26,7 +26,7 @@ export default function Header() {
                     <ul role='list'>
                         <li>
                             <Link
-                                href="https://www.linkedin.com/in/adrianosouzacosta"
+                                href="https://www.linkedin.com/company/devtalenthub"
                                 prefetch={false}
                                 target="_blank"
                             >

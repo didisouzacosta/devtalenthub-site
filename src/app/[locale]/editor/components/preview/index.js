@@ -9,6 +9,7 @@ import styles from './preview.module.css'
 
 export default function FormPreview({ values }) {
     const infos = [
+        {label: 'ID', value: values.id},
         {label: 'Slug', value: values.slug},
         {label: 'Title', value: values.title},
         {label: 'Company', value: values.company},
