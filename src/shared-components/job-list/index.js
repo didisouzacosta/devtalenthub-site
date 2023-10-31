@@ -14,7 +14,7 @@ function JobListItem({ job }) {
     return (
         <Link
             href={`/jobs/${job.slug}`}
-            prefetch={true}
+            prefetch={false}
             className={`${styles.job_list_item} ${isFeatured ? styles.featured : ''}`}
         >
             <div className={styles.company_wrapper}>
