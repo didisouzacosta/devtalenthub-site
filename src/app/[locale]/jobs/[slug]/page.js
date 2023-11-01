@@ -31,7 +31,7 @@ export default function Job({ params: { slug } }) {
                         title: 'Jobs',
                     },
                     {
-                        title: job.title,
+                        title: `${job.title} - ${job.company}`,
                     }
                 ]}
             />
@@ -47,7 +47,7 @@ export default function Job({ params: { slug } }) {
                                 priority="lazy"
                                 alt={job.company}
                             />
-                            <h1>{job.title}</h1>
+                            <h1>{`${job.title} - ${job.company}`}</h1>
                             <Image
                                 src={job.brand}
                                 className={styles.brand}
