@@ -4,8 +4,8 @@ import { Analytics } from '@vercel/analytics/react'
 import { NextIntlClientProvider } from 'next-intl'
 import { notFound } from 'next/navigation'
 
-import Header from '../../shared-components/header'
-import Footer from '../../shared-components/footer'
+import Header from '@/shared-components/header'
+import Footer from '@/shared-components/footer'
 
 export async function generateMetadata({ params: { locale } }) {
   const title = 'DevTalentHub'

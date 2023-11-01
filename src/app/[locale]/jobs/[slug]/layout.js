@@ -8,10 +8,17 @@ export async function generateMetadata({ params: { slug } }) {
 
     return {
         title,
-        // description,
+        description,
         openGraph: {
             title,
-            // description
+            description,
+            images: [
+                {
+                    url: '/opengraph-image.png',
+                    width: 1200,
+                    height: 630,
+                }
+            ]
         }
     }
 }
