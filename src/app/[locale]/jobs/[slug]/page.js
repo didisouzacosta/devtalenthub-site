@@ -18,7 +18,7 @@ export default function Job({ params: { slug } }) {
 
     if (error) return <div>failed to load</div>
     if (isLoading) return <div>loading...</div>
-    
+
     return (
         <>
             <Breadcrumb
