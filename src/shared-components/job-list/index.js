@@ -7,13 +7,13 @@ import { useTranslations } from 'next-intl';
 import styles from './job-list.module.css'
 import useSearchJobs from '@/hooks/useSearchJobs'
 
-function JobListItem({ job }) {
+function JobListItem({ job, locale }) {
     const t = useTranslations('job')
     const isFeatured = job.salary != null
 
     return (
         <Link
-            href={`/jobs/${job.slug}`}
+            href={`/${locale}/jobs/${job.slug}`}
             prefetch={false}
             className={`${styles.job_list_item} ${isFeatured ? styles.featured : ''}`}
         >
@@ -51,7 +51,7 @@ function JobListItem({ job }) {
     )
 }
 
-export default function JobList({ query }) {
+export default function JobList({ query, locale }) {
     const { result, resultError, resultIsLoading } = useSearchJobs(query)
 
     if (resultError) return <div>failed to load</div>
@@ -61,7 +61,7 @@ export default function JobList({ query }) {
         <section className={styles.container}>
             <div className={styles.job_list}>
                 <div className={styles.job_list_items}>
-                    { result?.map((job, index) => <JobListItem job={job} key={index} />) }
+                    { result?.map((job, index) => <JobListItem job={job} locale={locale} key={index} />) }
                 </div>
             </div>
         </section>
