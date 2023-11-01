@@ -18,7 +18,7 @@ export async function generateMetadata({ params: { locale } }) {
     generator: 'Next.js',
     applicationName: 'DevTalentHub',
     referrer: 'origin-when-cross-origin',
-    keywords: ['Next.js', 'React', 'JavaScript'],
+    keywords: ['Mobile', 'iOS', 'Android', 'Jobs', 'Job', 'Proposals', 'Swift', 'React Native', 'Flutter', 'Junior', 'Pleno', 'Senior'],
     authors: [{ name: 'Adriano Souza Costa', url: 'https://github.com/didisouzacosta' }],
     creator: 'Adriano Souza Costa',
     publisher: 'Adriano Souza Costa',
