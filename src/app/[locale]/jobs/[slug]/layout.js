@@ -3,10 +3,16 @@ import PageContent from "@/shared-components/page-content"
 
 export async function generateMetadata({ params: { slug } }) {
     const job = await getJobBySlug(slug)
+    const title = `${job.title} - ${job.company}`
+    const description = job.description
 
     return {
-        title: job.title,
-        description: job.description,
+        title,
+        // description,
+        openGraph: {
+            title,
+            // description
+        }
     }
 }
 

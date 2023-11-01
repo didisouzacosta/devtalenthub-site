@@ -14,20 +14,49 @@ export async function generateMetadata({ params: { locale } }) {
   return {
     title,
     description,
+    category: 'technology',
+    generator: 'Next.js',
+    applicationName: 'DevTalentHub',
+    referrer: 'origin-when-cross-origin',
+    keywords: ['Next.js', 'React', 'JavaScript'],
+    authors: [{ name: 'Adriano Souza Costa', url: 'https://github.com/didisouzacosta' }],
+    creator: 'Adriano Souza Costa',
+    publisher: 'Adriano Souza Costa',
+    metadataBase: new URL('http://www.devtalenthub.com'),
+    alternates: {
+      canonical: '/',
+      languages: {
+        'en': '/en',
+        'pt-BR': '/pt-BR',
+      },
+    },
     openGraph: {
-        title,
-        description,
-        url: 'http://www.devtalenthub.com',
-        siteName: title,
-        images: [
-            {
-                url: '/opengraph-image.png',
-                width: 1200,
-                height: 630,
-            }
-        ],
-        locale,
-        type: 'website'
+      title,
+      description,
+      url: 'http://www.devtalenthub.com',
+      siteName: title,
+      images: [
+        {
+          url: '/opengraph-image.png',
+          width: 1200,
+          height: 630,
+        }
+      ],
+      locale,
+      type: 'website'
+    },
+    robots: {
+      index: true,
+      follow: true,
+      nocache: true,
+      googleBot: {
+        index: true,
+        follow: true,
+        noimageindex: true,
+        'max-video-preview': -1,
+        'max-image-preview': 'large',
+        'max-snippet': -1,
+      },
     }
   }
 }
