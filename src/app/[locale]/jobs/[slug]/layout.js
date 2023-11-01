@@ -10,8 +10,7 @@ export async function generateMetadata({ params: { slug } }, parent) {
 
     const openGraph = {
         ...previous.openGraph,
-        title,
-        description
+        title
     }
 
     return {
