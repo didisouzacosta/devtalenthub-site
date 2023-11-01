@@ -1,6 +1,6 @@
 export const metadata = {
     title: 'DevTalent Hub',
-    description: 'Find your great oporntunity',
+    description: 'DevTalentHub: Your gateway to mobile app opportunities. Discover innovative projects, connect with talent, and shape the future of mobile development.',
 }
 
 export default function HomeLayout({ children }) {
