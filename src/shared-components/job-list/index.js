@@ -2,10 +2,12 @@
 
 import Image from 'next/image'
 import Link from 'next/link'
-import { useTranslations } from 'next-intl';
+import { useMemo } from 'react'
+import { useTranslations } from 'next-intl'
 
 import styles from './job-list.module.css'
 import useSearchJobs from '@/hooks/useSearchJobs'
+
 
 function JobListItem({ job, locale }) {
     const t = useTranslations('job')
@@ -53,6 +55,7 @@ function JobListItem({ job, locale }) {
 
 export default function JobList({ query, locale }) {
     const { result, resultError, resultIsLoading } = useSearchJobs(query)
+    const listItems = useMemo(() => result?.map((job, index) => <JobListItem job={job} locale={locale} key={index} />), [result])
 
     if (resultError) return <div>failed to load</div>
     if (resultIsLoading) return <div>loading...</div>
@@ -61,7 +64,7 @@ export default function JobList({ query, locale }) {
         <section className={styles.container}>
             <div className={styles.job_list}>
                 <div className={styles.job_list_items}>
-                    { result?.map((job, index) => <JobListItem job={job} locale={locale} key={index} />) }
+                    { listItems }
                 </div>
             </div>
         </section>
