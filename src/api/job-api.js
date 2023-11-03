@@ -1,3 +1,4 @@
+import { summarize } from '@/util/ai'
 import firebase_app from '@/util/firebase'
 import { getFirestore, query, where, collection, getDocs, doc, addDoc } from 'firebase/firestore/lite'
 
@@ -61,5 +62,7 @@ export async function getJobBySlug(slug) {
 
 export async function saveJob(job) {
     const c = collection(database, 'jobs')
+    const summaries = await summarize(job.description ?? "")
+    job.summary = summaries[0]
     return await addDoc(c, job)
 }

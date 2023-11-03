@@ -7,6 +7,7 @@ export default function useGetAllJobs() {
     const refresh = () => mutate('getAllJobs')
 
     const { data, error, isLoading } = useSWR('getAllJobs', getAllJobs)
+
     return {
         result: data,
         error: error,

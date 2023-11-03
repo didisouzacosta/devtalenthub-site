@@ -32,7 +32,8 @@ export default function Editor() {
         messageApi.open({
             key,
             type: 'loading',
-            content: 'Loading...'
+            content: 'Loading...',
+            duration: 0
         })
 
         await saveJob(formValues)
